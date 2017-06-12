@@ -35,34 +35,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="TestStart.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TestStart.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TestStart.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="468" column="4" lean-forward="false" selection-start-line="468" selection-start-column="4" selection-end-line="468" selection-end-column="4" />
+            <state relative-caret-position="12928">
+              <caret line="404" column="4" lean-forward="false" selection-start-line="404" selection-start-column="4" selection-end-line="404" selection-end-column="4" />
               <folding>
-                <element signature="e#151#173#0" expanded="false" />
-                <element signature="e#227#251#0" expanded="false" />
-                <element signature="e#318#346#0" expanded="false" />
-                <element signature="e#877#914#0" expanded="false" />
-                <element signature="e#1893#1925#0" expanded="false" />
-                <element signature="e#3306#3335#0" expanded="false" />
-                <element signature="e#4656#4685#0" expanded="false" />
-                <element signature="e#6209#6244#0" expanded="false" />
-                <element signature="e#7559#7594#0" expanded="false" />
-                <element signature="e#8364#8400#0" expanded="false" />
-                <element signature="e#9092#9139#0" expanded="false" />
-                <element signature="e#9515#9542#0" expanded="false" />
-                <element signature="e#9877#9907#0" expanded="false" />
-                <element signature="e#10706#10737#0" expanded="false" />
-                <element signature="e#11296#11324#0" expanded="false" />
-                <element signature="e#11465#11490#0" expanded="false" />
-                <element signature="e#11496#11531#0" expanded="false" />
-                <element signature="e#11601#11635#0" expanded="false" />
-                <element signature="e#11705#11745#0" expanded="false" />
-                <element signature="e#11864#11898#0" expanded="false" />
-                <marker date="1497240556356" expanded="true" signature="12047:12048" ph="{...}" />
+                <marker date="1497244512434" expanded="true" signature="12084:12085" ph="{...}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ParameterizationTypes.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/chapter14/ParameterizationTypes.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="384">
+              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -112,7 +102,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/src/chapter10/VarianceUnderInheritance.scala" />
         <option value="$PROJECT_DIR$/src/src/JavaClass/TestJava.java" />
         <option value="$PROJECT_DIR$/src/src/chapter10/MutableTypeVariance.scala" />
         <option value="$PROJECT_DIR$/src/src/myTrouble/TroubleText.scala" />
@@ -163,6 +152,7 @@
         <option value="$PROJECT_DIR$/src/chapter13/VisibilityIdea.scala" />
         <option value="$PROJECT_DIR$/src/chapter14/TypeSystemInitial.scala" />
         <option value="$PROJECT_DIR$/src/TestStart.scala" />
+        <option value="$PROJECT_DIR$/src/chapter14/ParameterizationTypes.scala" />
       </list>
     </option>
   </component>
@@ -214,7 +204,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -253,14 +245,12 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$APPLICATION_HOME_DIR$/mysql-connector-java-5.1.42" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/Text/HTML/HelloWorld" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -725,12 +715,13 @@
       <workItem from="1497225533951" duration="15000" />
       <workItem from="1497225619087" duration="6991000" />
       <workItem from="1497233370565" duration="79000" />
-      <workItem from="1497233507437" duration="7105000" />
+      <workItem from="1497233507437" duration="10237000" />
+      <workItem from="1497248287980" duration="225000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="289936000" />
+    <option name="totallyTimeSpent" value="293293000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -748,13 +739,12 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33628318" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35066372" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35066372" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35066372" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944915" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -772,6 +762,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33628318" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32838982" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944915" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -794,7 +785,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files (x86)/scala/lib/scala-library.jar!/scala/Array.class" />
     <entry file="jar://C:/Program Files (x86)/scala/lib/scala-library.jar!/scala/collection/immutable/BitSet.class" />
     <entry file="file://$PROJECT_DIR$/src/chapter12/package.scala">
       <provider selected="true" editor-type-id="text-editor">
@@ -897,13 +887,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/chapter10/MutableTypeVariance.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-320">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/chapter13/DefaultVisibility.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
@@ -915,7 +898,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
           <caret line="8" column="39" lean-forward="false" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -923,14 +905,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="36" lean-forward="false" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
-          <folding>
-            <element signature="e#222#235#0" expanded="false" />
-            <element signature="e#1664#1665#0" expanded="false" />
-            <element signature="e#1721#1722#0" expanded="false" />
-            <element signature="method#show#0;class#TestJava#0" expanded="false" />
-            <element signature="e#1819#1820#0" expanded="false" />
-            <element signature="e#1843#1844#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -938,7 +912,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-86">
           <caret line="98" column="3" lean-forward="true" selection-start-line="98" selection-start-column="3" selection-end-line="98" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -946,7 +919,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
           <caret line="50" column="4" lean-forward="false" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -954,37 +926,31 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
           <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chapter10/MutableTypeVariance.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-71">
+          <caret line="40" column="56" lean-forward="true" selection-start-line="40" selection-start-column="56" selection-end-line="40" selection-end-column="56" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TestStart.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="468" column="4" lean-forward="false" selection-start-line="468" selection-start-column="4" selection-end-line="468" selection-end-column="4" />
+        <state relative-caret-position="12928">
+          <caret line="404" column="4" lean-forward="false" selection-start-line="404" selection-start-column="4" selection-end-line="404" selection-end-column="4" />
           <folding>
-            <element signature="e#151#173#0" expanded="false" />
-            <element signature="e#227#251#0" expanded="false" />
-            <element signature="e#318#346#0" expanded="false" />
-            <element signature="e#877#914#0" expanded="false" />
-            <element signature="e#1893#1925#0" expanded="false" />
-            <element signature="e#3306#3335#0" expanded="false" />
-            <element signature="e#4656#4685#0" expanded="false" />
-            <element signature="e#6209#6244#0" expanded="false" />
-            <element signature="e#7559#7594#0" expanded="false" />
-            <element signature="e#8364#8400#0" expanded="false" />
-            <element signature="e#9092#9139#0" expanded="false" />
-            <element signature="e#9515#9542#0" expanded="false" />
-            <element signature="e#9877#9907#0" expanded="false" />
-            <element signature="e#10706#10737#0" expanded="false" />
-            <element signature="e#11296#11324#0" expanded="false" />
-            <element signature="e#11465#11490#0" expanded="false" />
-            <element signature="e#11496#11531#0" expanded="false" />
-            <element signature="e#11601#11635#0" expanded="false" />
-            <element signature="e#11705#11745#0" expanded="false" />
-            <element signature="e#11864#11898#0" expanded="false" />
-            <marker date="1497240556356" expanded="true" signature="12047:12048" ph="{...}" />
+            <marker date="1497244512434" expanded="true" signature="12084:12085" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/chapter14/ParameterizationTypes.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

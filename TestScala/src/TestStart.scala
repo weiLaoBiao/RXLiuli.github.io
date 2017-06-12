@@ -409,7 +409,7 @@ object TestStart {
     //endregion
 
     //region MutableTypeVariance(可变类型的变异)
-    //        chapter10.MutableTypeVariance.default()
+    //    chapter10.MutableTypeVariance.default()
     //endregion
 
     //region TypeStruction(Scala的类型层次结构)
@@ -489,7 +489,7 @@ object TestStart {
     //endregion
 
     //region ParameterizationTypes(参数化类型)
-    
+    chapter14.ParameterizationTypes.default()
     //endregion
 
     //endregion
