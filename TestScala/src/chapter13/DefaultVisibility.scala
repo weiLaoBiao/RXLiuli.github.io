@@ -81,5 +81,6 @@ object DefaultVisibility {
     val dog5 = new Dog5("旺旺4", "广州", "天源路")
     println(s"Dog5(${dog5.city},${dog5.detail})")
     println(dog5)
+    
   }
 }

@@ -12,7 +12,7 @@ object TestStart {
     //endregion
 
     //region Java(Java方面的测试)
-    //        TestJavaClass.TestJava.myDefault()
+    //    TestJavaClass.TestJava.myDefault()
     //endregion
 
     //region myScala(Scala额外的收获)
@@ -469,7 +469,27 @@ object TestStart {
     //region chapter13(可见性规则)
 
     //region DefaultVisibility(默认访问修饰符)
-    chapter13.DefaultVisibility.default()
+    //    chapter13.DefaultVisibility.default()
+    //endregion
+
+    //region VisibilityKeyword(可见性关键字)
+    //    chapter13.VisibilityKeyword.default()
+    //endregion
+
+    //region VisibilityIdea(对可见性的想法 idea:想法)
+    //    chapter13.VisibilityIdea.default()
+    //endregion
+
+    //endregion
+
+    //region chapter13(Scala类型系统)
+
+    //region TypeSystemInitial(类型系统初步)
+    //    chapter14.TypeSystemInitial.default()
+    //endregion
+
+    //region ParameterizationTypes(参数化类型)
+    
     //endregion
 
     //endregion

@@ -7,17 +7,20 @@ import java.util.ArrayList;
 public class TestJava {
 
     public static void myDefault() {
+        TestDog testDog = null;
+        testDog.show(); //还是发生了空指针异常
+        //region 废弃代码
+
 //        int i = 1 > 0 ? 1 :  getInt();
 
-        for (int i = 2; i < 365; i++) {
-            BigDecimal bd = new BigDecimal(0);
-            for (int j = 1; j < i; j++) {
+//        for (int i = 2; i < 365; i++) {
+//            BigDecimal bd = new BigDecimal(0);
+//            for (int j = 1; j < i; j++) {
+//
+//            }
+//
+//        }
 
-            }
-
-        }
-
-        //region 废弃代码
 
 //        paserXML();
 
@@ -57,6 +60,12 @@ public class TestJava {
 //        instance.whateverMethod();
 
         //endregion
+    }
+
+    class TestDog {
+        public void show() {
+            System.out.println("null 也可以调用？");
+        }
     }
 
     static void show() {
