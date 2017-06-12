@@ -466,8 +466,13 @@ object TestStart {
 
     //endregion
 
-    //Scala可见性规则
+    //region chapter13(可见性规则)
 
+    //region DefaultVisibility(默认访问修饰符)
+    chapter13.DefaultVisibility.default()
+    //endregion
+
+    //endregion
 
   }
 }
