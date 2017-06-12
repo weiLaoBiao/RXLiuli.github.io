@@ -1,1 +1,0 @@
-java -jar TestScala.jar
