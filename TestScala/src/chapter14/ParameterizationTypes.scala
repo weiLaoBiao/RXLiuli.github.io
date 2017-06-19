@@ -1,5 +1,6 @@
 package chapter14
 
+
 /**
   * Created by rxliuli on 17-6-12.
   */
@@ -58,7 +59,6 @@ object ParameterizationTypes {
       * 也许,当你第一次遇到 List.+: 这个方法签名时,它并没有表现出明显的意义,
       * 但一旦学习了 12.3 节中我们对设计常用方法的讨论,你就会明白 List.+: 的含义。
       */
-
 
   }
 }
