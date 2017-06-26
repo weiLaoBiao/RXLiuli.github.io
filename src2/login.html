@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" href="css/login.css"/>
+    <!--必须先引入jquery再引用js！！！-->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/register.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+</head>
+<body>
+<!--header 头部-->
+<header>
+    <div>
+        <a href="home.html"><img src="images/logo.jpg"/></a>
+    </div>
+    <ul>
+        <li>您好，欢迎光临1号店！<a href="#">请登录</a></li>
+        <li>
+            <div class="help-dropdown-menu">
+                <a href="#">
+                    <img src="images/help-ico.png"/>
+                    帮助中心e
+                    <img src="images/dropdown-ico.png"/>
+                </a>
+                <ul>
+                    <li><a href="">包裹跟踪</a></li>
+                    <li><a href="">常见问题</a></li>
+                    <li><a href="">在线退换货</a></li>
+                    <li><a href="">在线投诉</a></li>
+                    <li><a href="">配送范围</a></li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</header>
+
+<!--主体部分-->
+<section>
+    <div>
+        <a href=""><img src="images/login-logo.jpg"/></a>
+    </div>
+    <div id="login-pc">
+        <div id="login-title">
+            <b>1号店用户登录</b>
+            <a href="register.html">注册新账号</a>
+        </div>
+        <form action="" method="post">
+            <input type="text" required placeholder="邮箱/手机/用户名"/>
+            <input type="password" required placeholder="密码"/>
+            <div>
+                <label>
+                    <input type="checkbox"/>
+                    <small>自动登录</small>
+                    <small class="help-warning">
+                        请勿在公用电脑上启用
+                    </small>
+                </label>
+                <a href="">
+                    <small>忘记密码</small>
+                </a>
+            </div>
+            <input type="submit" value="登录"/>
+        </form>
+        <p>
+            <small>更多合作网站账号登录</small>
+        </p>
+        <br/>
+        <!--更多合作网站账号登录-->
+        <div class="joint_landing_wrap">
+            <div>
+                <a href="https://passport.yhd.com/qq/login.do"
+                   target="_blank" class="iconfont qq" title="QQ">
+                    <img src="images/QQ.jpg" height="40px"/>
+                </a>
+                <a href="https://passport.yhd.com/jingdong/login.do"
+                   target="_blank" class="iconfont jingdong" title="京东">
+                    <img src="images/京东.png" height="40px"/>
+                </a>
+                <a href="https://passport.yhd.com/wechat/login.do" target="_blank"
+                   class="iconfont weixin" title="微信">
+                    <img src="images/微信.png" height="40px"/>
+                </a>
+                <a href="https://passport.yhd.com/sina/login.do"
+                   target="_blank" class="iconfont sina" title="新浪微博">
+                    <img src="images/微博.png" height="40px"/>
+                </a>
+            </div>
+            <div class="unfold">
+                <small>更多合作网站</small>
+                <img src="images/dropdown-ico.png"/>
+            </div>
+        </div>
+        <!--隐藏的更多的合作网站-->
+        <div id="hiddenContent">
+            <table>
+                <tr>
+                    <td><a href="" target="_blank">
+                        <small>支付宝</small>
+                    </a></td>
+                    <td><a href="" target="_blank">
+                        <small>网易</small>
+                    </a></td>
+                    <td><a href="" target="_blank">
+                        <small>百度</small>
+                    </a></td>
+                    <td><a href="" target="_blank">
+                        <small>中国移动</small>
+                    </a></td>
+                </tr>
+                <tr>
+                    <td><a href="" target="_blank">
+                        <small>开心网</small>
+                    </a></td>
+                    <td><a href="" target="_blank">
+                        <small>人人网</small>
+                    </a></td>
+                    <td><a href="" target="_blank">
+                        <small>平安万里通</small>
+                    </a></td>
+                    <td><a href="" target="_blank">
+                        <small>蘑菇街</small>
+                    </a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!--footer 版权部分-->
+<footer>
+    <div>
+        <p>
+            <a href="">沪ICP备16050468号</a> |
+            <a href="">沪B2-20170039</a> |
+            <a href="">营业执照</a>
+        </p>
+        <p>Copyright © 1号店网上超市 2007-2017，All Rights Reserved</p>
+    </div>
+</footer>
+</body>
+</html>

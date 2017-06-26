@@ -1,0 +1,145 @@
+/*region 通用*/
+
+/*为了浏览器的兼容，还是删除所有默认的内外边距吧*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*使用无序列表一般不需要前面的符号*/
+li {
+    list-style-type: none;
+}
+
+/*a 标签默认的下划线是不需要的*/
+a {
+    text-decoration: none;
+}
+
+/*一般而言链接在鼠标悬浮时会变成红色*/
+a:hover {
+    color: red;
+}
+
+/*一般而言 body（即网页整体） 需要居中显示*/
+body {
+    margin: 0 auto;
+}
+
+small {
+    color: grey;
+}
+
+/*endregion*/
+
+/*region header 头部*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 20px auto;
+}
+
+header > ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*设置间隔距离*/
+header > ul > li {
+    margin-left: 20px;
+}
+
+/*设置图片垂直居中对齐*/
+.help-dropdown-menu img {
+    vertical-align: middle;
+}
+
+/*设置下拉菜单的固定宽度防止将其他区块挤走*/
+header > ul > li:last-child {
+    width: 120px;
+}
+
+/*设置默认隐藏*/
+.help-dropdown-menu ul {
+    display: none;
+    position: absolute;
+    text-indent: 1em;
+}
+
+.help-dropdown-menu ul li {
+    padding-top: 5px;
+}
+
+/*鼠标悬浮特效*/
+.help-dropdown-menu:hover ul {
+    position: absolute;
+    transition: all 300ms;
+}
+
+/*endregion*/
+
+/*region section 中部*/
+
+section {
+    max-width: 1000px;
+    margin: auto;
+}
+
+section form {
+    width: 400px;
+    margin: auto;
+}
+
+/*标题居中*/
+section form h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+section form label {
+    display: block;
+    width: 400px;
+}
+
+section form label > * {
+    width: 100%;
+    height: 50px;
+    /*border: solid 1px darkcyan;*/
+    /*border-radius: 5px;*/
+    margin-bottom: 10px;
+}
+
+/*获取短信验证码部分*/
+.phone {
+    display: flex;
+    justify-content: space-around;
+    width: 415px;
+}
+
+.phone input[type="button"] {
+    margin-left: 10px;
+    background-color: grey;
+    color: white;
+}
+
+.phone input[type="button"]:hover, section form input[type="submit"]:hover {
+    cursor: pointer;
+}
+
+/*登录部分*/
+section form input[type="submit"] {
+    background-color: orangered;
+    color: white;
+}
+
+/*endregion*/
+
+/*region footer 版权部分*/
+footer div {
+    margin: 20px auto;
+    text-align: center;
+}
+
+/*endregion*/
