@@ -1,3 +1,5 @@
+import scala.annotation.tailrec
+import scala.collection.immutable.NumericRange
 import scala.io.StdIn
 
 /**
@@ -12,7 +14,7 @@ object TestStart {
     //endregion
 
     //region Java(Java方面的测试)
-    //    TestJavaClass.TestJava.myDefault()
+    TestJavaClass.TestJava.myDefault()
     //endregion
 
     //region myScala(Scala额外的收获)
@@ -461,7 +463,7 @@ object TestStart {
     //region chapter12(Scala集合库)
 
     //region ScalaCollections(通用,可变,不可变,并发以及并行集合)
-    //        chapter12.ScalaCollections.default()
+    //    chapter12.ScalaCollections.default()
     //endregion
 
     //endregion
@@ -493,6 +495,8 @@ object TestStart {
     //endregion
 
     //endregion
+
+    println(NumericRange[BigInt](1, 1000, 1).product.toString.length)
 
   }
 }
