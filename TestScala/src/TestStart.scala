@@ -489,7 +489,7 @@ object TestStart {
     //endregion
 
     //region ParameterizationTypes(参数化类型)
-    chapter14.ParameterizationTypes.default()
+    //    chapter14.ParameterizationTypes.default()
     //endregion
 
     //endregion
