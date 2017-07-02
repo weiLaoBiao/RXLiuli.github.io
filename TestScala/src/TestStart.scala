@@ -1,6 +1,5 @@
 import scala.annotation.tailrec
 import scala.collection.immutable.NumericRange
-import scala.io.StdIn
 
 /**
   * Created by RXLiuli on 2017/3/23.
@@ -41,7 +40,7 @@ object TestStart {
 
     //endregion
 
-    //region chapter01(第一章: 零到十六，Scala简介)
+    //region chapter01(第一章: 零到十六,Scala简介)
 
     //region mainArgs(主函数参数)
     /**
@@ -85,7 +84,7 @@ object TestStart {
 
     //endregion
 
-    //region chapter02(第二章: 更简洁，更强大)
+    //region chapter02(第二章: 更简洁,更强大)
 
     //region TestRange(数字序列)
     //        chapter02.TestRange.default()
@@ -404,7 +403,7 @@ object TestStart {
 
     //endregion
 
-    //region chapter10(Scala对象系统I)
+    //region chapter10(第十章: Scala对象系统I)
 
     //region VarianceUnderInheritance(继承转化)
     //        chapter10.VarianceUnderInheritance.default()
@@ -436,7 +435,7 @@ object TestStart {
 
     //endregion
 
-    //region chapter11(Scala对象系统II)
+    //region chapter11(第十一章: Scala对象系统II)
 
     //region CoverMember(覆盖类成员和trait成员)
     //        chapter11.CoverMember.default()
@@ -460,7 +459,7 @@ object TestStart {
 
     //endregion
 
-    //region chapter12(Scala集合库)
+    //region chapter12(第十二章: Scala集合库)
 
     //region ScalaCollections(通用,可变,不可变,并发以及并行集合)
     //    chapter12.ScalaCollections.default()
@@ -468,7 +467,7 @@ object TestStart {
 
     //endregion
 
-    //region chapter13(可见性规则)
+    //region chapter13(第十三章: 可见性规则)
 
     //region DefaultVisibility(默认访问修饰符)
     //    chapter13.DefaultVisibility.default()
@@ -484,7 +483,7 @@ object TestStart {
 
     //endregion
 
-    //region chapter13(Scala类型系统)
+    //region chapter13(第十四章: Scala类型系统)
 
     //region TypeSystemInitial(类型系统初步)
     //    chapter14.TypeSystemInitial.default()
@@ -495,8 +494,6 @@ object TestStart {
     //endregion
 
     //endregion
-
-    println(NumericRange[BigInt](1, 1000, 1).product.toString.length)
 
   }
 }
