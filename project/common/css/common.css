@@ -1,0 +1,279 @@
+/*region 通用*/
+
+/*为了浏览器的兼容，还是删除所有默认的内外边距吧*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*使用无序列表一般不需要前面的符号*/
+li {
+    list-style-type: none;
+}
+
+/*a 标签默认的下划线是不需要的*/
+a {
+    text-decoration: none;
+}
+
+/*一般而言链接在鼠标悬浮时会变成红色*/
+a:hover {
+    /*color: orangered;*/
+}
+
+/*一般而言 body（即网页整体） 需要居中显示*/
+body {
+    margin: 0 auto;
+}
+
+/*endregion*/
+
+/*region 顶部导航栏*/
+
+.nav-top {
+    border-bottom: solid 2px orangered;
+}
+
+/*设置水平对齐方式*/
+.nav-top ul {
+    display: flex;
+    justify-content: center;
+}
+
+/*设置 ul 中的文字大小*/
+.nav-top ul {
+    font-size: 18px;
+}
+
+/*设置 a 标签的大小*/
+.nav-top ul li a {
+    display: block;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+/*设置 a 标签的悬浮时改变背景色和颜色*/
+.nav-top ul li a:hover {
+    background-color: orangered;
+    color: white;
+    transition: all 1s;
+}
+
+/*endregion*/
+
+/*region 幻灯片*/
+
+/*幻灯片容器*/
+.slide-show-container {
+    max-width: 1000px;
+    /*之所以要设置成相对定位是因为需要将子元素包裹进去*/
+    position: relative;
+    margin: auto;
+    transition: 1s ease;
+}
+
+.slide-show-container:hover .prev,
+.slide-show-container:hover .next {
+    display: block;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/*设置默认隐藏以及第一个显示*/
+.my-slides {
+    display: none;
+}
+
+.my-slides:first-child {
+    display: block;
+}
+
+/*上一个，下一个 按钮*/
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    color: white;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 3px;
+    display: none;
+    transition: 1s ease;
+}
+
+.next {
+    right: 0;
+}
+
+/*设置鼠标悬浮时左移和右移的效果*/
+.slide-show-container .prev:hover, .slide-show-container .next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/*设置左上角的数字*/
+.number-text {
+    color: white;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/*设置下面的跳转圆点*/
+.dots {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+.dots span {
+    cursor: pointer;
+    width: 13px;
+    height: 13px;
+    margin: 0 2px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 1s ease;
+}
+
+.dots span:first-child, .dots span:hover {
+    background-color: #717171;
+}
+
+/*图片出现时的模糊动画效果*/
+.fade {
+    animation: fade 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/*endregion*/
+
+/*region 幻灯片（背景图片的实现）*/
+
+/*a 标签的布局*/
+.slide-show-container-02 {
+    display: block;
+    width: 1000px;
+    height: 350px;
+    margin: auto;
+    background: url("../images/img_fjords_wide.jpg") no-repeat;
+}
+
+/*鼠标悬浮时,整体的模糊动画效果*/
+.slide-show-container-02:hover {
+    cursor: pointer;
+}
+
+/*设置当鼠标悬浮时上一个，下一个的图标浮现出来*/
+.slide-show-container-02:hover .plusSlides a {
+    display: block;
+}
+
+/*左上角的图片是第几次*/
+.number-text-02 {
+    height: 20px;
+    line-height: 20px;
+    padding: 5px 10px;
+    color: white;
+}
+
+/*中间的 上一个，下一个 按钮*/
+.plusSlides {
+    display: flex;
+    justify-content: space-between;
+    height: 81%;
+}
+
+.plusSlides a {
+    cursor: pointer;
+    color: white;
+    margin: auto 0;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.3);
+    display: none;
+    transition: 0.5s ease;
+}
+
+.plusSlides a:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: orangered;
+}
+
+/*下面的圆点*/
+.dots-02 {
+    width: 100px;
+    margin: auto;
+
+}
+
+.dots-02 span {
+    cursor: pointer;
+    width: 13px;
+    height: 13px;
+    margin: 0 2px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.5s ease;
+}
+
+.dots-02 span:first-child, .dots-02 span:hover {
+    background-color: #717171;
+}
+
+/*endregion*/
+
+/*region 手风琴*/
+
+/*整体效果*/
+.my-accordions {
+    width: 1000px;
+    margin: auto;
+}
+
+/*设置按钮的属性*/
+button.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.5s;
+}
+
+/*鼠标悬浮或者点击时修改按钮的背景颜色*/
+button.accordion:active, button.accordion:hover {
+    background-color: #ddd;
+}
+
+/*具体的内容*/
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+}
+
+/*强制要求显示时为区块元素*/
+.panel.show {
+    /*注: !important 代表该设置强制生效（不管你在其他地方怎么设置的）*/
+    display: block !important;
+}
+
+/*endregion*/

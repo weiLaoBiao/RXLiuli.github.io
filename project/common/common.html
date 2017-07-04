@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>common</title>
+    <link rel="stylesheet" href="css/common.css"/>
+    <!--导入 jQuery 库-->
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/common.js"></script>
+</head>
+<body>
+<!--region 顶部导航栏-->
+
+<nav class="nav-top">
+    <ul>
+        <li class="nav-top-first"><a href="">全部商品分类</a></li>
+        <li><a href="">首页</a></li>
+        <li><a href="">自营超市</a></li>
+        <li><a href="">一号团</a></li>
+        <li><a href="">一号超市</a></li>
+        <li><a href="">女装</a></li>
+        <li><a href="">美妆</a></li>
+        <li><a href="">一号海购</a></li>
+        <li><a href="">团购</a></li>
+    </ul>
+</nav>
+
+<!--endregion-->
+<br/>
+
+<!--region 幻灯片-->
+
+<div class="slide-show-container">
+    <div class="my-slides fade">
+        <div class="number-text">1 / 4</div>
+        <a href=""><img src="images/img_fjords_wide.jpg"/></a>
+    </div>
+    <div class="my-slides fade">
+        <div class="number-text">2 / 4</div>
+        <a href=""><img src="images/img_lights_wide.jpg"/></a>
+    </div>
+    <div class="my-slides fade">
+        <div class="number-text">3 / 4</div>
+        <a href=""><img src="images/img_mountains_wide.jpg"/></a>
+    </div>
+    <div class="my-slides fade">
+        <div class="number-text">4 / 4</div>
+        <a href=""><img src="images/img_nature_wide.jpg"/></a>
+    </div>
+
+    <a class="prev">&#10094;</a>
+    <a class="next">&#10095;</a>
+
+    <!--下面的圆点-->
+    <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+
+<!--endregion-->
+<br/>
+
+<!--region 幻灯片（背景图片实现）事实证明该方法更好一些-->
+
+<div class="slide-show-container-02">
+    <div class="number-text-02">1 / 4</div>
+    <div class="plusSlides">
+        <a class="prev-02">&#10094;</a>
+        <a class="next-02">&#10095;</a>
+    </div>
+    <!--下面的圆点-->
+    <div class="dots-02">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+
+<!--endregion-->
+<br/>
+
+<!--region 手风琴-->
+
+<ul class="my-accordions">
+    <li>
+        <button class="accordion">Section 01</button>
+        <div class="panel">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.
+            </p>
+        </div>
+    </li>
+    <li>
+        <button class="accordion">Section 02</button>
+        <div class="panel">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.
+            </p>
+        </div>
+    </li>
+    <li>
+        <button class="accordion">Section 03</button>
+        <div class="panel">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.
+            </p>
+        </div>
+    </li>
+
+</ul>
+
+<!--endregion-->
+
+</body>
+</html>

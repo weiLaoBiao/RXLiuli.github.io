@@ -1,4 +1,6 @@
 *.class
 *.log
 out/
-.idea/
+/.idea/
+*.xml
+*.iml
