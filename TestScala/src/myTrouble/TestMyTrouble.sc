@@ -3,7 +3,7 @@ import scala.collection.mutable.ArrayBuffer
 println("hello scala")
 
 class Person(val name: String, var age: Int) {
-    override def toString: String = s"Person($name, $age)"
+  override def toString: String = s"Person($name, $age)"
 }
 
 object Person {
@@ -22,7 +22,7 @@ ab += "月姬"
 ab.foreach(s => print(s"$s\t"))
 //获取元素的长度
 val ab2: scala.collection.mutable.ArrayBuffer[Int] =
-    ab.map(_.length)
+  ab.map(_.length)
 //添加元素
 ab2 += (1, 2, 3, 4)
 //ab2 += List(1, 2, 3) //编译错误
@@ -52,13 +52,13 @@ s"转化成Array数组: $array"
 println(s"数组的类型是: ${array.getClass} ")
 //array += 1 //数组不能添加新的元素
 for {
-    i <- ab2
-    if i % 2 == 0 //卫语句
-    k = i * 2 //赋值变量
+  i <- ab2
+  if i % 2 == 0 //卫语句
+  k = i * 2 //赋值变量
 } println(k + i)
 //等价的容器方法调用链
 ab2.withFilter(_ % 2 == 0).
-foreach(i => println(i * 2 + i))
+  foreach(i => println(i * 2 + i))
 ab2.sum //总和(实际上是相加,数值计算总和,非数值使用toString后连接)
 ArrayBuffer("1ad", "2b", "ac").max //排序而已,并不是长度
 ab2.sorted //默认升序排列
@@ -69,8 +69,8 @@ s"使用工具方法排序后: ${array.mkString(",")}"
 
 val matrix = Array.ofDim[Int](3, 4)
 for {
-    i <- matrix.indices
-    k <- matrix(i).indices
+  i <- matrix.indices
+  k <- matrix(i).indices
 } matrix(i)(k) = i + k
 
 matrix.foreach(x => println(x.mkString(", ")))
@@ -80,8 +80,8 @@ matrix.foreach(x => println(x.mkString(", ")))
 //九九乘法表
 val multiplication = Array.ofDim[String](9, 9)
 for {
-    i <- multiplication.indices
-    k <- multiplication(i).indices
+  i <- multiplication.indices
+  k <- multiplication(i).indices
 } multiplication(i)(k) = s"$k * $i = ${k * i}"
 
 multiplication.foreach(x => println(x.mkString("\t")))
@@ -92,12 +92,12 @@ multiplication.foreach(x => println(x.mkString("\t")))
 val mul = new Array[Array[String]](9)
 //生成符合长度的矩阵
 for {
-    i <- mul.indices
+  i <- mul.indices
 } mul(i) = new Array[String](i + 1)
 
 for {
-    i <- mul.indices
-    k <- mul(i).indices
+  i <- mul.indices
+  k <- mul(i).indices
 } mul(i)(k) = s"${k + 1}*${i + 1}=${(k + 1) * (i + 1)}"
 
 //打印九九乘法表
@@ -117,6 +117,6 @@ map.getOrElse(10, "")
 map -= 1
 map.remove(4)
 scala.collection.immutable.
-SortedMap
+  SortedMap
 
 

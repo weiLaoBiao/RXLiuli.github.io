@@ -9,24 +9,127 @@
     <script src="js/common.js"></script>
 </head>
 <body>
-<!--region 顶部导航栏-->
 
-<nav class="nav-top">
-    <ul>
-        <li class="nav-top-first"><a href="">全部商品分类</a></li>
-        <li><a href="">首页</a></li>
-        <li><a href="">自营超市</a></li>
-        <li><a href="">一号团</a></li>
-        <li><a href="">一号超市</a></li>
-        <li><a href="">女装</a></li>
-        <li><a href="">美妆</a></li>
-        <li><a href="">一号海购</a></li>
-        <li><a href="">团购</a></li>
-    </ul>
-</nav>
+<!--region 响应式表格（弹性表格）-->
+<div>
+    <table>
+        <tr>
+        </tr>
+    </table>
+</div>
+<br/>
+
+
+<!--region 模态盒（模式对话框）-->
+
+<button class="modal-btn">打开模态</button>
+<div class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <p>模态盒</p>
+            <span class="close">×</span>
+        </div>
+        <div class="modal-body">
+            <h3>Hello World!</h3>
+            <p>Modals are awesome!</p>
+            <p>Go Back To <a href="http://w3schools.com">W3</a> How TO Examples</p>
+        </div>
+        <div class="modal-footer">
+            页脚
+        </div>
+    </div>
+</div>
+<br/><br/>
 
 <!--endregion-->
+
+<!--region 标签页-->
+
+<div class="my-tabs">
+    <ul class="tabs">
+        <li>伦敦</li>
+        <li>巴黎</li>
+        <li>东京</li>
+    </ul>
+    <ul class="tabs-content">
+        <li>
+            <h3>伦敦</h3>
+            <p>伦敦是英国的首都城市。</p>
+        </li>
+        <li>
+            <h3>巴黎</h3>
+            <p>巴黎是法国的首都。</p>
+        </li>
+        <li>
+            <h3>东京</h3>
+            <p>东京是日本的首都。</p>
+        </li>
+    </ul>
+</div>
 <br/>
+
+<!--endregion-->
+
+<!--region 手风琴-->
+
+<ul class="my-accordions">
+    <li>
+        <button class="accordion active01">Section 01</button>
+        <div class="panel">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.
+            </p>
+        </div>
+    </li>
+    <li>
+        <button class="accordion active01">Section 02</button>
+        <div class="panel">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.
+            </p>
+        </div>
+    </li>
+    <li>
+        <button class="accordion active01">Section 03</button>
+        <div class="panel">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.
+            </p>
+        </div>
+    </li>
+</ul>
+<br/>
+
+<!--endregion-->
+
+<!--region 幻灯片（背景图片实现）事实证明该方法更好一些-->
+
+<div class="slide-show-container-02">
+    <div class="number-text-02">1 / 4</div>
+    <div class="plusSlides">
+        <a class="prev-02">&#10094;</a>
+        <a class="next-02">&#10095;</a>
+    </div>
+    <!--下面的圆点-->
+    <div class="dots-02">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+<br/>
+
+<!--endregion-->
 
 <!--region 幻灯片-->
 
@@ -59,70 +162,29 @@
         <span></span>
     </div>
 </div>
-
-<!--endregion-->
 <br/>
 
-<!--region 幻灯片（背景图片实现）事实证明该方法更好一些-->
-
-<div class="slide-show-container-02">
-    <div class="number-text-02">1 / 4</div>
-    <div class="plusSlides">
-        <a class="prev-02">&#10094;</a>
-        <a class="next-02">&#10095;</a>
-    </div>
-    <!--下面的圆点-->
-    <div class="dots-02">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-</div>
-
 <!--endregion-->
+
+<!--region 顶部导航栏-->
+
+<nav class="nav-top">
+    <ul>
+        <li class="nav-top-first"><a href="">全部商品分类</a></li>
+        <li><a href="">首页</a></li>
+        <li><a href="">自营超市</a></li>
+        <li><a href="">一号团</a></li>
+        <li><a href="">一号超市</a></li>
+        <li><a href="">女装</a></li>
+        <li><a href="">美妆</a></li>
+        <li><a href="">一号海购</a></li>
+        <li><a href="">团购</a></li>
+    </ul>
+</nav>
 <br/>
 
-<!--region 手风琴-->
-
-<ul class="my-accordions">
-    <li>
-        <button class="accordion">Section 01</button>
-        <div class="panel">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat.
-            </p>
-        </div>
-    </li>
-    <li>
-        <button class="accordion">Section 02</button>
-        <div class="panel">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat.
-            </p>
-        </div>
-    </li>
-    <li>
-        <button class="accordion">Section 03</button>
-        <div class="panel">
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat.
-            </p>
-        </div>
-    </li>
-
-</ul>
-
 <!--endregion-->
 
+<!--<div style="height: 500px;"></div>-->
 </body>
 </html>

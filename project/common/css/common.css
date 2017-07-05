@@ -28,35 +28,258 @@ body {
 
 /*endregion*/
 
-/*region 顶部导航栏*/
+/*region 模态盒（模式对话框）*/
 
-.nav-top {
-    border-bottom: solid 2px orangered;
+/*设置一下按钮*/
+.modal-btn {
+    margin-left: 45%;
+    padding: 5px 10px;
+    border: none;
+    background-color: darkcyan;
+    color: white;
+    transition: 0.5s;
 }
 
-/*设置水平对齐方式*/
-.nav-top ul {
+/*鼠标悬浮时按钮的特效*/
+.modal-btn:hover {
+    cursor: pointer;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/*设置模态盒*/
+.modal {
+    position: fixed;
+    /*设置 top 为 0 是为了从最上面开始计算高度（宽度同理）*/
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /* 宽高最大化（防止点击其他的东西） */
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+}
+
+/*设置内层的盒子*/
+.modal-content {
+    position: relative;
+    max-width: 1000px;
+    /*设置盒子的阴影（立体感）*/
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /*设置模态盒的位置*/
+    margin: auto;
+}
+
+/*模态盒的头部*/
+.modal-header, .modal-footer {
+    background-color: darkcyan;
+    color: white;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 10px;
+}
+
+/*头部私有属性*/
+.modal-header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    font-size: 26px;
 }
 
-/*设置 ul 中的文字大小*/
-.nav-top ul {
-    font-size: 18px;
+/*模态盒的主体部分*/
+.modal-body {
+    /*height: 100px;*/
+    line-height: 30px;
+    background-color: white;
+    padding: 0 10px;
 }
 
-/*设置 a 标签的大小*/
-.nav-top ul li a {
-    display: block;
+/*设置关闭按钮*/
+.close {
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.close:hover {
+    color: black;
+}
+
+/*endregion*/
+
+/*region 标签页*/
+/*整体布局*/
+.my-tabs {
+    width: 400px;
+    margin: auto;
+}
+
+.tabs {
+    display: flex;
+    justify-content: flex-start;
+    background-color: #f1f1f1;
+}
+
+/*每个标签页的宽度*/
+.tabs li {
     padding: 10px 20px;
     text-align: center;
+    transition: all 1s;
+    cursor: pointer;
 }
 
-/*设置 a 标签的悬浮时改变背景色和颜色*/
-.nav-top ul li a:hover {
-    background-color: orangered;
+/*当鼠标悬浮时 就是 js 要添加的 class */
+.tabsHover {
+    /*background-color: #ddd;*/
+    background-color: black;
     color: white;
-    transition: all 1s;
+}
+
+/*设置固定高度并隐藏溢出的内容*/
+.tabs-content {
+    height: 70px;
+    overflow: hidden;
+}
+
+.tabs-content li {
+    padding: 6px 12px;
+    border: solid 1px #ccc;
+}
+
+/*endregion*/
+
+/*region 手风琴*/
+
+/*整体效果*/
+.my-accordions {
+    width: 500px;
+    height: 265px;
+    margin: auto;
+    /*border: solid 1px grey;*/
+}
+
+/*设置按钮的属性*/
+button.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.5s;
+}
+
+/*鼠标悬浮或者点击时修改按钮的背景颜色*/
+button.accordion:active, button.accordion:hover {
+    background-color: #ddd;
+}
+
+/*具体的内容默认隐藏*/
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+}
+
+.my-accordions li:first-child .panel {
+    display: block;
+}
+
+/*追加内容*/
+.accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+/*追加符号*/
+.active01:after {
+    content: "\2795";
+}
+
+.active02:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+/*endregion*/
+
+/*region 幻灯片（背景图片的实现）*/
+
+/*a 标签的布局*/
+.slide-show-container-02 {
+    display: block;
+    width: 1000px;
+    height: 350px;
+    margin: auto;
+    background: url("../images/img_fjords_wide.jpg") no-repeat;
+}
+
+/*鼠标悬浮时,整体的模糊动画效果*/
+.slide-show-container-02:hover {
+    cursor: pointer;
+}
+
+/*设置当鼠标悬浮时上一个，下一个的图标浮现出来*/
+.slide-show-container-02:hover .plusSlides a {
+    display: block;
+}
+
+/*左上角的图片是第几次*/
+.number-text-02 {
+    height: 20px;
+    line-height: 20px;
+    padding: 5px 10px;
+    color: white;
+}
+
+/*中间的 上一个，下一个 按钮*/
+.plusSlides {
+    display: flex;
+    justify-content: space-between;
+    height: 81%;
+}
+
+.plusSlides a {
+    cursor: pointer;
+    color: white;
+    margin: auto 0;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.3);
+    display: none;
+    transition: 0.5s ease;
+}
+
+.plusSlides a:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: orangered;
+}
+
+/*下面的圆点*/
+.dots-02 {
+    width: 100px;
+    margin: auto;
+
+}
+
+.dots-02 span {
+    cursor: pointer;
+    width: 13px;
+    height: 13px;
+    margin: 0 2px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.5s ease;
+}
+
+.dots-02 span:first-child, .dots-02 span:hover {
+    background-color: #717171;
 }
 
 /*endregion*/
@@ -159,121 +382,35 @@ body {
 
 /*endregion*/
 
-/*region 幻灯片（背景图片的实现）*/
+/*region 顶部导航栏*/
 
-/*a 标签的布局*/
-.slide-show-container-02 {
-    display: block;
-    width: 1000px;
-    height: 350px;
-    margin: auto;
-    background: url("../images/img_fjords_wide.jpg") no-repeat;
+.nav-top {
+    border-bottom: solid 2px orangered;
 }
 
-/*鼠标悬浮时,整体的模糊动画效果*/
-.slide-show-container-02:hover {
-    cursor: pointer;
-}
-
-/*设置当鼠标悬浮时上一个，下一个的图标浮现出来*/
-.slide-show-container-02:hover .plusSlides a {
-    display: block;
-}
-
-/*左上角的图片是第几次*/
-.number-text-02 {
-    height: 20px;
-    line-height: 20px;
-    padding: 5px 10px;
-    color: white;
-}
-
-/*中间的 上一个，下一个 按钮*/
-.plusSlides {
+/*设置水平对齐方式*/
+.nav-top ul {
     display: flex;
-    justify-content: space-between;
-    height: 81%;
+    justify-content: center;
 }
 
-.plusSlides a {
-    cursor: pointer;
-    color: white;
-    margin: auto 0;
-    padding: 15px;
-    font-weight: bold;
+/*设置 ul 中的文字大小*/
+.nav-top ul {
     font-size: 18px;
-    border-radius: 3px;
-    background: rgba(0, 0, 0, 0.3);
-    display: none;
-    transition: 0.5s ease;
 }
 
-.plusSlides a:hover {
-    background: rgba(0, 0, 0, 0.8);
-    color: orangered;
+/*设置 a 标签的大小*/
+.nav-top ul li a {
+    display: block;
+    padding: 10px 20px;
+    text-align: center;
 }
 
-/*下面的圆点*/
-.dots-02 {
-    width: 100px;
-    margin: auto;
-
-}
-
-.dots-02 span {
-    cursor: pointer;
-    width: 13px;
-    height: 13px;
-    margin: 0 2px;
-    background-color: white;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.5s ease;
-}
-
-.dots-02 span:first-child, .dots-02 span:hover {
-    background-color: #717171;
-}
-
-/*endregion*/
-
-/*region 手风琴*/
-
-/*整体效果*/
-.my-accordions {
-    width: 1000px;
-    margin: auto;
-}
-
-/*设置按钮的属性*/
-button.accordion {
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    text-align: left;
-    border: none;
-    outline: none;
-    transition: 0.5s;
-}
-
-/*鼠标悬浮或者点击时修改按钮的背景颜色*/
-button.accordion:active, button.accordion:hover {
-    background-color: #ddd;
-}
-
-/*具体的内容*/
-.panel {
-    padding: 0 18px;
-    background-color: white;
-    display: none;
-}
-
-/*强制要求显示时为区块元素*/
-.panel.show {
-    /*注: !important 代表该设置强制生效（不管你在其他地方怎么设置的）*/
-    display: block !important;
+/*设置 a 标签的悬浮时改变背景色和颜色*/
+.nav-top ul li a:hover {
+    background-color: orangered;
+    color: white;
+    transition: all 1s;
 }
 
 /*endregion*/
