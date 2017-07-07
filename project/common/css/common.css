@@ -28,6 +28,223 @@ body {
 
 /*endregion*/
 
+/*region 装载机*/
+
+/*使用 css3 动画实现*/
+.loader {
+    display: block;
+    /*设置装载机转圈的背景（如果四个边框都设置了就不需要了）*/
+    /*border: 16px solid #f3f3f3;*/
+    /*设置上*/
+    border-top: 16px solid darkcyan;
+    border-bottom: 16px solid orange;
+    border-left: 16px solid darkred;
+    border-right: 16px solid black;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/*css3 动画*/
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/*使用 jQuery 实现*/
+.loader-jQuery {
+    display: block;
+    /*设置装载机转圈的背景（如果四个边框都设置了就不需要了）*/
+    /*border: 16px solid #f3f3f3;*/
+    /*设置上*/
+    border-top: 100px solid darkcyan;
+    border-bottom: 100px solid orange;
+    border-left: 100px solid darkred;
+    border-right: 100px solid black;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+}
+
+/*endregion*/
+
+/*region 下拉菜单*/
+
+/*整体布局*/
+.drop-down {
+    width: 800px;
+    max-height: 50px;
+    margin: auto;
+}
+
+/*设置按钮（无关）*/
+.drop-btn {
+    width: 100px;
+    text-align: center;
+    padding: 5px 10px;
+    background-color: aqua;
+}
+
+/*设置下拉菜单的内容*/
+.drop-down-content {
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+/*设置下拉菜单内容 li 的属性*/
+.drop-down-content li a {
+    display: block;
+    width: 100px;
+    height: 20px;
+    line-height: 20px;
+    padding: 5px 10px;
+    z-index: 1;
+    transition: 1s;
+}
+
+.drop-down-content li:hover a {
+    background-color: darkcyan;
+    color: white;
+}
+
+/*endregion*/
+
+/*region 进度条*/
+/*外层的盒子*/
+.my-progress {
+    max-width: 1000px;
+    height: 30px;
+    background-color: grey;
+}
+
+/*进度条*/
+.my-bar {
+    width: 0;
+    height: 100%;
+    background-color: darkcyan;
+    text-align: center;
+    animation: progress-bar 10s;
+}
+
+/*endregion*/
+
+/*region 模态图片（模式化窗口打开图片）*/
+
+/*设置小图的属性*/
+.modal-img {
+    width: 300px;
+    display: block;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: auto;
+    transition: 0.3s;
+}
+
+/*鼠标悬浮时小图的效果*/
+.modal-img:hover {
+    opacity: 0.7;
+}
+
+/*设置模态盒的内容*/
+.modal-02 {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/*模态盒的内容*/
+.modal-content-02 {
+    display: block;
+    margin: auto;
+    width: 80%;
+    animation: zoom 1s;
+    box-shadow: 0 0 10px;
+}
+
+/*下方的文字信息*/
+.caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/*设置图片和文字都使用逐渐变大动画*/
+.modal-content-02, .caption {
+    animation: zoom 0.6s;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+/*关闭按钮*/
+.close-02 {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: white;
+    cursor: pointer;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close-02:hover {
+    color: #bbb;
+    transform: scale(1.5);
+}
+
+/*endregion*/
+
+/*region 响应表格（自适应表格）*/
+/*使用自定义边框替换表格默认的边框（丑哭了）*/
+.table-auto {
+    /*关键就是这句话，可依然表格的宽度自动伸缩*/
+    overflow-x: auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: solid 1px #ddd;
+}
+
+/*设置单元格*/
+.table-auto th, .table-auto td {
+    border: none;
+    text-align: left;
+    padding: 8px;
+}
+
+/*设置隔行变色*/
+.table-auto tr:nth-child(even) {
+    background-color: #eee;
+}
+
+/*endregion*/
+
 /*region 模态盒（模式对话框）*/
 
 /*设置一下按钮*/
@@ -97,11 +314,12 @@ body {
 /*设置关闭按钮*/
 .close {
     cursor: pointer;
-    transition: 0.5s;
+    transition: 1s;
 }
 
 .close:hover {
     color: black;
+    transform: scale(1.5);
 }
 
 /*endregion*/

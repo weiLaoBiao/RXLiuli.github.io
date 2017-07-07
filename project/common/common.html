@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
 <head>
     <meta charset="UTF-8">
     <title>common</title>
@@ -7,18 +7,136 @@
     <!--导入 jQuery 库-->
     <script src="js/jquery-3.2.1.js"></script>
     <script src="js/common.js"></script>
+    <base href="javascript:void(0)" target="_self"/>
 </head>
 <body>
+<br/>
+<br/>
 
-<!--region 响应式表格（弹性表格）-->
-<div>
-    <table>
-        <tr>
-        </tr>
-    </table>
+<!--region 装载机-->
+
+<!--使用 css3 实现的装载机-->
+<a href="" class="loader"></a>
+<!--使用 jQuery 实现的装载机-->
+<a href="" class="loader-jQuery"></a>
+
+<br/>
+
+<!--endregion-->
+
+<!--region 下拉框（悬浮或点击）-->
+
+<div class="drop-down">
+    <div class="drop-btn"><a href="">下拉菜单</a></div>
+    <ul class="drop-down-content">
+        <li><a href="">下</a></li>
+        <li><a href="">下拉</a></li>
+        <li><a href="">下拉菜</a></li>
+        <li><a href="">下拉菜单</a></li>
+        <li><a href="">下拉菜单05</a></li>
+    </ul>
 </div>
 <br/>
 
+<!--endregion-->
+
+<!--region 进度条-->
+
+<div class="my-progress">
+    <div class="my-bar"></div>
+</div>
+<button class="progress-btn" onclick="progress(50)">Run</button>
+<br/>
+
+<!--endregion-->
+
+<!--region 模态图片（模式化窗口打开图片）-->
+
+<!--主要问题：图片渐变最大化，模式化窗口-->
+<img class="modal-img" src="images/img_fjords_wide.jpg"/>
+<div class="modal-02">
+    <span class="close-02">&times;</span>
+    <img class="modal-content-02" src="images/img_fjords_wide.jpg"/>
+    <div class="caption">一些短信息（比如图片名）</div>
+</div>
+<br/>
+
+<!--endregion-->
+
+<!--region 响应式表格（弹性表格）-->
+
+<div style="max-width: 1000px; margin: auto;">
+    <table class="table-auto">
+        <tr>
+            <th>姓名</th>
+            <th>性别</th>
+            <th>年龄</th>
+            <th>职业</th>
+            <th>邮箱</th>
+            <th>爱好</th>
+        </tr>
+        <tr>
+            <td>琉璃</td>
+            <td>女</td>
+            <td>10</td>
+            <td>轮回者</td>
+            <td>rx@liuli.com</td>
+            <td>知识</td>
+        </tr>
+        <tr>
+            <td>琉璃</td>
+            <td>女</td>
+            <td>10</td>
+            <td>轮回者</td>
+            <td>rx@liuli.com</td>
+            <td>知识</td>
+        </tr>
+        <tr>
+            <td>琉璃</td>
+            <td>女</td>
+            <td>10</td>
+            <td>轮回者</td>
+            <td>rx@liuli.com</td>
+            <td>知识</td>
+        </tr>
+        <tr>
+            <td>琉璃</td>
+            <td>女</td>
+            <td>10</td>
+            <td>轮回者</td>
+            <td>rx@liuli.com</td>
+            <td>知识</td>
+        </tr>
+        <tr>
+            <td>琉璃</td>
+            <td>女</td>
+            <td>10</td>
+            <td>轮回者</td>
+            <td>rx@liuli.com</td>
+            <td>知识</td>
+        </tr>
+        <tr>
+            <td>琉璃</td>
+            <td>女</td>
+            <td>10</td>
+            <td>轮回者</td>
+            <td>rx@liuli.com</td>
+            <td>知识</td>
+        </tr>
+        <tr>
+            <td>琉璃</td>
+            <td>女</td>
+            <td>10</td>
+            <td>轮回者</td>
+            <td>rx@liuli.com</td>
+            <td>知识</td>
+        </tr>
+    </table>
+    <br/>
+</div>
+
+
+<!--endregion-->
 
 <!--region 模态盒（模式对话框）-->
 
@@ -27,7 +145,7 @@
     <div class="modal-content">
         <div class="modal-header">
             <p>模态盒</p>
-            <span class="close">×</span>
+            <span class="close">&times;</span>
         </div>
         <div class="modal-body">
             <h3>Hello World!</h3>
@@ -111,7 +229,7 @@
 
 <!--endregion-->
 
-<!--region 幻灯片（背景图片实现）事实证明该方法更好一些-->
+<!--region 幻灯片（背景图片实现）事实证明该方法用于单纯的图片幻灯片更好一些-->
 
 <div class="slide-show-container-02">
     <div class="number-text-02">1 / 4</div>
@@ -131,24 +249,24 @@
 
 <!--endregion-->
 
-<!--region 幻灯片-->
+<!--region 幻灯片（display属性控制，适用于更复杂的情况）-->
 
 <div class="slide-show-container">
     <div class="my-slides fade">
         <div class="number-text">1 / 4</div>
-        <a href=""><img src="images/img_fjords_wide.jpg"/></a>
+        <a href=""><img src="images/img_fjords_wide.jpg" alt="图片未能正常加载"/></a>
     </div>
     <div class="my-slides fade">
         <div class="number-text">2 / 4</div>
-        <a href=""><img src="images/img_lights_wide.jpg"/></a>
+        <a href=""><img src="images/img_lights_wide.jpg" alt="图片未能正常加载"/></a>
     </div>
     <div class="my-slides fade">
         <div class="number-text">3 / 4</div>
-        <a href=""><img src="images/img_mountains_wide.jpg"/></a>
+        <a href=""><img src="images/img_mountains_wide.jpg" alt="图片未能正常加载"/></a>
     </div>
     <div class="my-slides fade">
         <div class="number-text">4 / 4</div>
-        <a href=""><img src="images/img_nature_wide.jpg"/></a>
+        <a href=""><img src="images/img_nature_wide.jpg" alt="图片未能正常加载"/></a>
     </div>
 
     <a class="prev">&#10094;</a>

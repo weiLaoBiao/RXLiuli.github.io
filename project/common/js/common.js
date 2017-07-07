@@ -1,29 +1,109 @@
 /**
  * Created by rxliuli on 17-7-3.
  */
+
+//region 装载机
+
+//使用 jQuery 实现装载机
+$(document).ready(function () {
+    var timer;
+    var angle = 0;
+
+    //启动和停止
+    $(".loader-jQuery").click(function () {
+        if (timer === undefined) spin();
+        else {
+            clearInterval(timer);
+            timer = undefined;
+        }
+    });
+
+    function spin() {
+        timer = setInterval(function () {
+            angle += 1;
+            $(".loader-jQuery").css({
+                transform: "rotate(" + angle + "deg)"
+            });
+        }, 5);
+    }
+});
+
+//endregion
+
+//region 下拉菜单（悬浮或点击）
+
+$(document).ready(function () {
+    //悬浮下拉框
+    $(".drop-down").hover(function () {
+        $(".drop-down-content").slideToggle(500);
+    });
+    //点击下拉框
+    // $(".drop-down").click(function () {
+    //     $(".drop-down-content").slideToggle(500);
+    // });
+});
+
+//endregion
+
+//region 进度条
+
+function progress(n) {
+    var $myBar = $(".my-bar");
+    //使用 jQuery 动画直接实现
+    // $myBar.css("width", "0");
+    // $myBar.animate({
+    //     width: n + "%"
+    // }, n * 100);
+
+    //使用 setInterval 实现
+    var i = 0;
+    var timer = setInterval(function () {
+        $myBar.css("width", i + "%");
+        $myBar.html(i.toFixed(1) + "%");
+        i += 0.1;
+        if (i > 80) clearInterval(timer);
+    }, 10)
+}
+
+//endregion
+
+//region 模态图像
+
+$(document).ready(function () {
+    $(".modal-img").click(function () {
+        $(".modal-02").fadeIn().find(".modal-content-02").attr("src", $(this).attr("src"));
+        // $(".modal-content-02").attr("src", "images/img_fjords_wide.jpg");
+    });
+    $(".close-02").click(function () {
+        $(".modal-02").fadeOut();
+    });
+});
+
+//endregion
+
 //region 模态盒
 
 $(document).ready(function () {
     //打开模态盒
     $(".modal-btn").click(function () {
-        var modal = $(".modal");
-        var modalContent = $(".modal-content");
-        $(modal).show();
+        var $modal = $(".modal");
+        var $modalContent = $(".modal-content");
+        $($modal).show();
         //jQuery 动画
-        $(modalContent).css({
+        $modalContent.css({
             top: "-200px",
             opacity: "0"
         });
-        $(modal).css({
+        $modal.css({
             opacity: "0"
         });
-        $(modalContent).animate({
+        $modalContent.animate({
             top: "100px",
             opacity: "1"
-        }, 500);
-        $(modal).animate({
+        }, 400);
+        $modal.animate({
             opacity: "1"
-        }, 500);
+        }, 400);
     });
     //关闭
     $(".close").click(function () {
@@ -36,12 +116,12 @@ $(document).ready(function () {
 //region 标签页
 
 $(document).ready(function () {
-    var tab = $(".tabs li");
-    var tabContent = $(".tabs-content li");
+    var $tab = $(".tabs li");
+    var $tabContent = $(".tabs-content li");
     tabChange(0);
 
     //切换
-    $(tab).mouseover(function () {
+    $tab.mouseover(function () {
         // alert($(this).index())
         tabChange($(this).index());
     });
@@ -49,8 +129,8 @@ $(document).ready(function () {
     //标签切换的具体实现
     function tabChange(n) {
         //链式调用
-        $(tab).removeClass("tabsHover").eq(n).addClass("tabsHover");
-        $(tabContent).fadeOut(0).eq(n).fadeIn();
+        $tab.removeClass("tabsHover").eq(n).addClass("tabsHover");
+        $tabContent.fadeOut(0).eq(n).fadeIn();
         // $(tab).eq(n).addClass("tabsHover");
         // $(tabContent).eq(n).fadeIn();
     }
@@ -80,9 +160,9 @@ $(document).ready(function () {
     });
 
     //一开始就将第一个设置为减号
-    var first = $(".my-accordions li:first-child .accordion");
-    $(first).removeClass("active01");
-    $(first).addClass("active02");
+    var $first = $(".my-accordions li:first-child .accordion");
+    $first.removeClass("active01");
+    $first.addClass("active02");
 });
 
 //endregion
@@ -133,10 +213,10 @@ $(document).ready(function () {
         index = n;
         if (n >= bgImgs.length) index = 0;
         else if (n < 0) index = bgImgs.length - 1;
-        var dots = $(".dots-02 span");
-        $(dots).css("background-color", "white");
+        var $dots = $(".dots-02 span");
+        $dots.css("background-color", "white");
         $(".slide-show-container-02").css("background-image", "url(images/" + bgImgs[index] + ")");
-        $(dots).eq(index).css("background-color", "#717171");
+        $dots.eq(index).css("background-color", "#717171");
         $(".number-text-02").html(index + 1 + " / " + bgImgs.length);
     }
 });
@@ -188,14 +268,14 @@ $(document).ready(function () {
 
     //具体的图片切换的代码
     function showSlides(n) {
-        var slides = $(".my-slides");
-        var dots = $(".dots span");
-        if (n >= slides.length) slideIndex = 0;
-        else if (n < 0) slideIndex = slides.length - 1;
-        $(slides).hide();
-        $(dots).css("background-color", "white");
-        $(slides).eq(slideIndex).show();
-        $(dots).eq(slideIndex).css("background-color", "#717171");
+        var $slides = $(".my-slides");
+        var $dots = $(".dots span");
+        if (n >= $slides.length) slideIndex = 0;
+        else if (n < 0) slideIndex = $slides.length - 1;
+        $slides.hide();
+        $dots.css("background-color", "white");
+        $slides.eq(slideIndex).show();
+        $dots.eq(slideIndex).css("background-color", "#717171");
     }
 });
 
