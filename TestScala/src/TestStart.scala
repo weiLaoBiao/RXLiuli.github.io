@@ -1,11 +1,9 @@
-import scala.annotation.tailrec
-import scala.collection.immutable.NumericRange
-
 /**
   * Created by RXLiuli on 2017/3/23.
   * 开始类，用于调用其它类
   */
 object TestStart {
+
   def main(args: Array[String]): Unit = {
 
     //region myTrouble(问题)
@@ -491,6 +489,14 @@ object TestStart {
 
     //region ParameterizationTypes(参数化类型)
     //    chapter14.ParameterizationTypes.default()
+    //endregion
+
+    //endregion
+
+    //region Scala GUI编程
+
+    //region GuiPreliminary(GUI 初步)
+    //    ScalaGUI.GuiPreliminary
     //endregion
 
     //endregion
