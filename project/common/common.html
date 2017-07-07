@@ -7,19 +7,45 @@
     <!--导入 jQuery 库-->
     <script src="js/jquery-3.2.1.js"></script>
     <script src="js/common.js"></script>
-    <base href="javascript:void(0)" target="_self"/>
-</head>
+    <!--<base href="javascript:void(0)" target="_self"/>-->
+</head>O
 <body>
 <br/>
 <br/>
 
+<!--region form 表单-->
+
+<form action="" method="post" class="form">
+    <h2>登录</h2>
+    <div><input type="text" required placeholder="用户名/手机号/邮箱"/><span></span></div>
+    <div><input type="password" required placeholder="密码" title="密码"
+                pattern="^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,18}$"/><span></span></div>
+    <div><label><input type="checkbox" title="记住密码"/><span></span></label></div>
+    <div><input type="submit" value="登录"/></div>
+</form>
+
+<!--endregion-->
+
+<!--region 过滤文本-->
+
+<ul class="filter">
+    <li>a</li>
+    <li>ab</li>
+    <li>abc</li>
+    <li>abcd</li>
+    <li>abcde</li>
+    <li>abcdef</li>
+    <li>abcdefg</li>
+</ul>
+
+<!--endregion-->
+
 <!--region 装载机-->
 
 <!--使用 css3 实现的装载机-->
-<a href="" class="loader"></a>
+<a href="javascript:void(0)" class="loader"></a>
 <!--使用 jQuery 实现的装载机-->
-<a href="" class="loader-jQuery"></a>
-
+<a href="javascript:void(0)" class="loader-jQuery"></a>
 <br/>
 
 <!--endregion-->

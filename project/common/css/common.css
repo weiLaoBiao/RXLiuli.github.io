@@ -28,6 +28,72 @@ body {
 
 /*endregion*/
 
+/*region form 表单*/
+
+/*设置表单整体*/
+.form {
+    margin: auto;
+    max-width: 1000px;
+}
+
+/*设置输入框的属性*/
+.form input[type='text'],
+.form input[type='password'] {
+    font-size: 20px;
+    line-height: 40px;
+    width: 300px;
+    transition: 0.5s;
+}
+
+.form input[type='text']:focus,
+.form input[type='password']:focus {
+    box-shadow: 0 0 5px 0 blue;
+}
+
+/*设置非法警告*/
+.form span {
+    color: red;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+/*设置div*/
+.form div:nth-child(2),
+.form div:nth-child(3) {
+    margin: 10px auto;
+}
+
+/*设置登录按钮*/
+.form input[type='submit'] {
+    font-size: 20px;
+    line-height: 40px;
+    border: none;
+    border-radius: 3px;
+    width: 315px;
+    background-color: orangered;
+    color: white;
+    transition: 0.5s;
+}
+
+.form input[type='submit']:hover {
+    box-shadow: 0 0 5px 0 grey;
+    background-color: darkred;
+    cursor: pointer;
+}
+
+/*endregion*/
+
+/*region jQuery 过滤*/
+.filter {
+    border: solid 3px orangered;
+    width: 300px;
+    margin: auto;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+/*endregion*/
+
 /*region 装载机*/
 
 /*使用 css3 动画实现*/

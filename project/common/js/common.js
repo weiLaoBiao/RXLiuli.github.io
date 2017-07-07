@@ -2,6 +2,52 @@
  * Created by rxliuli on 17-7-3.
  */
 
+
+
+//region form 表单
+
+$(document).ready(function () {
+    //网页加载完成后自动获得焦点
+    $(".form input[type='text']").focus();
+    //设置键盘绑定
+    $(" form").keydown(function (event) {
+        if (event.keyCode === 13) $(".form input[type='submit']").submit();
+    });
+    //设置表单验证
+    $(".form input[type='text']").change(function () {
+        if ($(this).val().trim() === "") $(this).next().html("用户名不能为空！");
+    });
+    $(".form input[type='password']").change(function () {
+        var regExpPwd = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,18}$/;
+
+        if ($(this).val().trim() === "")
+            $(this).css("box-shadow", "0 0 5px 0 red").next().html("密码不能为空！");
+        else if (!regExpPwd.test($(this).val()))
+            $(this).css("box-shadow", "0 0 5px 0 red").next().html("密码至少8位并且不能同时为字母或数字！");
+    });
+    //记住密码
+    $(".form input[type='checkbox']").change(function () {
+        //这只目前看来唯一获取 checkbox 是否选中的方法
+        // alert($(this).is(":checked"))
+        $(this).next().html($(this).is(":checked") ? "在公用电脑上请勿选择！" : "")
+    });
+});
+
+//endregion
+
+//region 过滤文本
+
+$(document).ready(function () {
+    //使用 contains 判断是否包含文本
+    $(".filter li:contains('e')").css("backgroundColor", "darkcyan");
+    //使用区间(lt,gt)
+    $(".filter li:gt(0):lt(3)").css("fontSize", "30px");
+    //使用取反 not()
+    $(".filter li:not(:contains('d'))").css("color", "grey");
+});
+
+//endregion
+
 //region 装载机
 
 //使用 jQuery 实现装载机
@@ -18,6 +64,7 @@ $(document).ready(function () {
         }
     });
 
+    //实际转动的方法
     function spin() {
         timer = setInterval(function () {
             angle += 1;
@@ -279,4 +326,35 @@ $(document).ready(function () {
     }
 });
 
+//endregion
+
+//region 给 jQuery 添加新的方法
+(function ($) {
+
+    $.fn.extend({
+        rotate: function (deg) {
+
+            // cache dom element
+            var $this = $(this);
+
+            // make deg random if not set
+            if (deg === null) {
+                deg = Math.floor(Math.random() * 359);
+            }
+
+            // rotate dom element
+            $this.css({
+                '-webkit-transform': 'rotate(' + deg + 'deg)',
+                '-moz-transform': 'rotate(' + deg + 'deg)',
+                '-ms-transform': 'rotate(' + deg + 'deg)',
+                '-o-transform': 'rotate(' + deg + 'deg)',
+                'transform': 'rotate(' + deg + 'deg)'
+            });
+
+            // make chainable
+            return $this;
+        }
+    });
+
+})(jQuery);
 //endregion
