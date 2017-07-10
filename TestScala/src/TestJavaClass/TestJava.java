@@ -1,12 +1,17 @@
 package TestJavaClass;
 
 
-import java.math.BigDecimal;
-import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
-public class TestJava {
+public class TestJava extends Date {
+    private void test() {
+        System.out.println(super.getClass().getName());
+    }
+
     public static void myDefault() {
-//        BigInteger big = new BigInteger("2");
-//        System.out.println(big.add(new BigInteger("1")));;
+        new TestJava().test();
+        List<String> list = new ArrayList<String>();
     }
 }

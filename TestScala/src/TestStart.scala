@@ -12,6 +12,7 @@ object TestStart {
 
     //region Java(Java方面的测试)
     //    TestJavaClass.TestJava.myDefault()
+    TestJavaClass.TestScala.default()
     //endregion
 
     //region myScala(Scala额外的收获)
