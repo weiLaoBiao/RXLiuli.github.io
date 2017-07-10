@@ -5,16 +5,15 @@
 //toggle 流事件
 
 $(document).ready(function () {
-    $(".toggle-btn").toggle(
+    $(".toggle-content").toggle(
         function () {
-            alert("dfsl")
-            $(".toggle-content").css("backgroundColor", "red");
+            $(".toggle-content").css("background-color", "green");
         },
         function () {
-            $(".toggle-content").css("backgroundColor", "darkcyan");
+            $(".toggle-content").css("background-color", "red");
         },
         function () {
-            $(".toggle-content").css("backgroundColor", "blue");
+            $(".toggle-content").css("background-color", "green");
         }
     );
 });
