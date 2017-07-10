@@ -2,7 +2,85 @@
  * Created by rxliuli on 17-7-3.
  */
 
+//region 回到顶部
 
+$(document).ready(function () {
+    //点击回到顶部事件
+    $("img.backToTop").click(function () {
+        backToTop();
+    });
+
+
+    //页面每次重新加载都回到最顶端(为了消除浏览器有时候无法回到顶端的问题还是暂且加上吧)
+    backToTop();
+    function backToTop() {
+        var $html = $(" html");
+        $html.animate({scrollTop: 0}, $html.attr("height"));
+    }
+});
+
+//endregion
+
+//region 分页
+
+$(document).ready(function () {
+    var len = $("ul.pagination li").length;
+    //点击第几个
+    $("ul.pagination li:gt(0):lt(" + (len - 2) + ")").click(function () {
+        paginationChange($(this).index());
+    });
+
+    //点击上一个和下一个
+    $("ul.pagination li:first a").click(function () {
+        paginationChange($("ul.pagination li a.active03").parent().index() - 1);
+    });
+    $("ul.pagination li:last a").click(function () {
+        paginationChange($("ul.pagination li a.active03").parent().index() + 1);
+    });
+
+    //实际上移动到第 n 个标签
+    function paginationChange(n) {
+        if (n < 1) n = len - 2;
+        else if (n > len - 2) n = 1;
+        $("ul.pagination li a").removeClass("active03");
+        $("ul.pagination li:eq(" + n + ") a").addClass("active03");
+        $("ul.pagination-content li").hide();
+        $("ul.pagination-content li:eq(" + n + ")").fadeIn();
+    }
+});
+
+//endregion
+
+//region 动画菜单图标
+
+$(document).ready(function () {
+    $(".animated-menu-icon").click(function () {
+        $(this).find(" div").toggleClass("change");
+    });
+});
+
+//endregion
+
+//region jQuery 拖放
+
+$(document).ready(function () {
+    var boo = false;
+    var patch;
+    //当鼠标被按下发生
+    $(".my-drag").mousedown(function () {
+
+    });
+    //鼠标移动时
+    $(document).mousemove(function (event) {
+
+    });
+    //鼠标放开
+    $(document).mouseup(function () {
+
+    });
+});
+
+//endregion
 
 //region form 表单
 
@@ -357,4 +435,25 @@ $(document).ready(function () {
     });
 
 })(jQuery);
+//endregion
+
+//region 问题
+
+$(document).ready(function () {
+    //jQuery 动画是依次执行的
+// $(".animated-menu-icon").animate({
+//     width: "1000px",
+//     height: "500px",
+//     backgroundColor: "red"
+// }, 10000, function () {
+//     alert("lfsd")
+// })
+
+    //html() 和 text()
+
+    // $(".animated-menu-icon").html("<div>fsdl</div>")
+    // $(".animated-menu-icon").text("<div>fsdl</div>")
+    //区别: html()可以插入 html 标签,而 text() 则永远都是内容
+});
+
 //endregion

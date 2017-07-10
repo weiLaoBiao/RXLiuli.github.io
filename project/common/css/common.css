@@ -1,29 +1,185 @@
-/*region 通用*/
+/**/
 
-/*为了浏览器的兼容，还是删除所有默认的内外边距吧*/
-* {
-    margin: 0;
-    padding: 0;
+/*region 3D 翻滚效果*/
+
+/*设置要翻滚的 div*/
+.roll-animate {
+    width: 200px;
+    height: 50px;
+    background-color: darkcyan;
+    margin: 100px auto;
+    cursor: pointer;
+    transition: 1s;
 }
 
-/*使用无序列表一般不需要前面的符号*/
-li {
-    list-style-type: none;
+/*鼠标悬浮时开始翻滚特效*/
+.roll-animate:hover {
+    /*transform: rotateX(360deg);*/
+    animation: roll 1s;
 }
 
-/*a 标签默认的下划线是不需要的*/
-a {
-    text-decoration: none;
+@keyframes roll {
+    from {
+        transform: rotateX(0deg);
+    }
+    to {
+        transform: rotateX(360deg);
+    }
 }
 
-/*一般而言链接在鼠标悬浮时会变成红色*/
-a:hover {
-    /*color: orangered;*/
+/*endregion*/
+
+/*region 回到顶部*/
+
+/*设置回到顶部按钮*/
+img.backToTop {
+    position: fixed;
+    right: 100px;
+    bottom: 100px;
+    cursor: pointer;
+    transition: 0.5s;
 }
 
-/*一般而言 body（即网页整体） 需要居中显示*/
-body {
-    margin: 0 auto;
+img.backToTop:hover {
+    transform: scale(1.5);
+}
+
+/*endregion*/
+
+/*region 分页*/
+
+/*下面的分页 ul */
+ul.pagination {
+    display: flex;
+    justify-content: center;
+}
+
+/*设置每个单独的按钮*/
+ul.pagination li a {
+    /*此处存在分歧点,既可以使用 justify-content,也可以使用 display 来处理,不过还是建议使用前者,因为可以"一步到位"!*/
+    /*display: inline-block;*/
+    display: inline-block;
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color: #f1f1f1;
+    transition: 0.5s;
+}
+
+/*设置鼠标悬浮时,鼠标点击后的样式*/
+ul.pagination li a:hover, ul.pagination li a.active03 {
+    color: white;
+    background-color: darkcyan;
+}
+
+/*设置内容*/
+/*外壳,几乎无关*/
+.pagination-content {
+    width: 1000px;
+    margin: auto auto 10px auto;
+}
+
+/*设置 li 的属性(重要!!!)*/
+.pagination-content li {
+    display: none;
+    line-height: 200px;
+    font-size: 100px;
+    text-align: center;
+    background-color: darkgoldenrod;
+}
+
+/*设置与初始页面*/
+.pagination-content li:nth-child(3) {
+    display: block;
+}
+
+/*endregion*/
+
+/*region 联系芯片*/
+.chip {
+    padding: 0 25px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 25px;
+    background-color: #f1f1f1;
+    width: 200px;
+    margin: auto;
+}
+
+/*设定图像*/
+.chip img {
+    float: left;
+    margin: 0 10px 0 -25px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+/*设定关闭按钮*/
+.close-btn {
+    padding-left: 10px;
+    color: grey;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    float: right;
+    transition: 0.5s;
+}
+
+.close-btn:hover {
+    color: black;
+}
+
+/*endregion*/
+
+/*region 动画菜单图标*/
+
+/*设置内容居中*/
+.animated-menu-icon {
+    cursor: pointer;
+    margin: auto;
+}
+
+/*设置图标的构成元素*/
+.animated-menu-icon div {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px auto;
+    transition: 0.4s;
+}
+
+/*设置三个构成元素的变化*/
+.change.bar1 {
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change.bar2 {
+    opacity: 0;
+}
+
+.change.bar3 {
+    transform: rotate(45deg) translate(-9px, -6px);
+}
+
+/*endregion*/
+
+/*region jQuery 拖动*/
+
+/*设置外面的"舞台"*/
+.my-container {
+    width: 1000px;
+    height: 500px;
+    margin: auto;
+    background-color: grey;
+}
+
+/*设置拖放的内容*/
+.my-drag {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: darkcyan;
+    margin: auto;
 }
 
 /*endregion*/
@@ -695,6 +851,36 @@ button.accordion:active, button.accordion:hover {
     background-color: orangered;
     color: white;
     transition: all 1s;
+}
+
+/*endregion*/
+
+/*region 通用*/
+
+/*为了浏览器的兼容，还是删除所有默认的内外边距吧*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*使用无序列表一般不需要前面的符号*/
+li {
+    list-style-type: none;
+}
+
+/*a 标签默认的下划线是不需要的*/
+a {
+    text-decoration: none;
+}
+
+/*一般而言链接在鼠标悬浮时会变成红色*/
+a:hover {
+    /*color: orangered;*/
+}
+
+/*一般而言 body（即网页整体） 需要居中显示*/
+body {
+    margin: 0 auto;
 }
 
 /*endregion*/
