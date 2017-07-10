@@ -2,6 +2,25 @@
  * Created by rxliuli on 17-7-3.
  */
 
+//toggle 流事件
+
+$(document).ready(function () {
+    $(".toggle-btn").toggle(
+        function () {
+            alert("dfsl")
+            $(".toggle-content").css("backgroundColor", "red");
+        },
+        function () {
+            $(".toggle-content").css("backgroundColor", "darkcyan");
+        },
+        function () {
+            $(".toggle-content").css("backgroundColor", "blue");
+        }
+    );
+});
+
+//endregion
+
 //region 回到顶部
 
 $(document).ready(function () {

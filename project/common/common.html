@@ -11,9 +11,24 @@
 </head>
 <body>
 
+<!--region toggle 事件-->
 
+<div class="toggle-content">
+    <button class="toggle-btn">切换颜色</button>
+</div>
+<br/>
 
-<!--region 3D 翻滚效果-->
+<!--endregion-->
+
+<!--region 动画搜索表单-->
+
+<form>
+    <input class="animate-search" type="search" name="search" placeholder="Search.."/>
+</form>
+
+<!--endregion-->
+
+<!--region 3D 翻滚效果（未完成）-->
 
 <div class="roll-animate">fsadfasfda</div>
 
@@ -58,9 +73,8 @@
 <div class="chip">
     <img src="images/img_avatar.jpg" alt="图片加载失败" height="100%"/>
     RXLiuli
-    <span class="close-btn" onclick="$('.chip').fadeOut()">&times;</span>
+    <span class="close-btn" onclick="$(this).parent().fadeOut()">&times;</span>
 </div>
-
 
 <!--endregion-->
 

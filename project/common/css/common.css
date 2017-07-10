@@ -1,5 +1,37 @@
 /**/
 
+/*region toggle 事件*/
+
+.toggle-content {
+    width: 200px;
+    height: 200px;
+    background-color: grey;
+    margin: auto;
+}
+
+.toggle-btn {
+    display: block;
+    margin: auto;
+}
+
+/*endregion*/
+
+/*region 动画搜索表单*/
+
+/*设置搜索框的属性*/
+.animate-search {
+    width: 300px;
+    font-size: 30px;
+    transition: width 0.4s ease-in-out;
+}
+
+/*获得焦点后宽度最大化*/
+.animate-search:focus {
+    width: 100%;
+}
+
+/*endregion*/
+
 /*region 3D 翻滚效果*/
 
 /*设置要翻滚的 div*/
