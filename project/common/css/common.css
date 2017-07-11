@@ -1,5 +1,205 @@
 /**/
 
+/*region 简易QQ*/
+
+/*region 老师的*/
+
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 22px;
+    font-family: "Arial", "微软雅黑";
+}
+
+#chat {
+    margin: 3px auto 0 auto;
+    width: 436px;
+    border: 1px #999999 solid;
+}
+
+.chatBody {
+    width: 100%;
+    height: 220px;
+    overflow: auto;
+}
+
+.chatText {
+    border: none;
+    width: 100%;
+    height: 50px;
+}
+
+.btn {
+    text-align: right;
+}
+
+.btn span {
+    display: inline-block;
+    padding: 0 10px;
+    height: 25px;
+    overflow: hidden;
+    color: #ffffff;
+    border-radius: 5px;
+    background-color: #069dd5;
+    font-size: 12px;
+    margin-right: 3px;
+    cursor: pointer;
+}
+
+/*endregion*/
+
+/*region 设定的*/
+/*设置输入框字体大小*/
+.chatText {
+    font-size: 20px;
+}
+
+/*设置原型*/
+.prototype {
+    margin-bottom: 10px;
+    display: none;
+}
+
+.prototype img, .prototype > div {
+    display: inline-block;
+}
+
+.prototype img {
+    height: 40px;
+    float: left;
+    margin-right: 10px;
+}
+
+.prototype > div {
+    width: 350px;
+    background-color: #069dd5;
+    border-radius: 5px;
+    padding-left: 10px;
+    min-height: 50px;
+    /*强制换行*/
+    word-break: break-all;
+}
+
+/*endregion*/
+
+/*endregion*/
+
+/*region 拨动开关*/
+
+/*拨动按钮整体*/
+.switch {
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    height: 34px;
+}
+
+/*默认隐藏复选框*/
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+}
+
+/*在后面追加按钮*/
+.slider:before {
+
+}
+
+/*endregion*/
+
+/*region 弹性盒子布局(垂直)*/
+
+.flex-container-03 {
+    display: inline-flex;
+    /*设置垂直方向排列(如果没有这个就会变成水平排列而却在垂直方向上居中)*/
+    flex-direction: column;
+    /*设置水平居中(如果没有这个就无法水平居中)*/
+    align-items: center;
+    width: 400px;
+    height: 400px;
+    background-color: silver;
+    margin: 10px;
+}
+
+.flex-item-03 {
+    background-color: deepskyblue;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+}
+
+/*endregion*/
+
+/*region 弹性盒子布局(水平-02)*/
+
+/*整体布局*/
+.flex-container-02 {
+    display: inline-flex;
+    justify-content: center;
+    width: 400px;
+    height: 400px;
+    background-color: silver;
+    margin: 10px;
+}
+
+/*小盒子的通用属性*/
+.flex-item-02 {
+    background-color: deepskyblue;
+    width: 90px;
+    margin: 5px;
+}
+
+/*然而,如果我们有时候需要将某个或某几个元素分至两边*/
+.flex-item-02:last-child {
+    /*这实在是一种很常见的场景,比如说你需要将四个元素分布在左边,剩余的元素分布在右边(帮助)*/
+    margin-left: auto;
+}
+
+/*endregion*/
+
+/*region 弹性盒子布局(水平)*/
+
+/*大盒子整体*/
+.flex-container {
+    display: inline-flex;
+    width: 400px;
+    height: 400px;
+    background-color: Silver;
+    margin: 10px;
+}
+
+/*小盒子通用属性*/
+.flex-item {
+    background-color: DeepSkyBlue;
+    margin: 5px;
+}
+
+/*每个盒子占有的宽度比例*/
+.item1 {
+    /*我们可以设置小盒子的宽度比例(标准为 1 )*/
+    flex: 2;
+}
+
+.item2 {
+    flex: 1;
+}
+
+.item3 {
+    flex: 1;
+}
+
+/*endregion*/
+
 /*region toggle 事件*/
 
 /*内容*/
@@ -199,21 +399,73 @@ ul.pagination li a:hover, ul.pagination li a.active03 {
 
 /*region jQuery 拖动*/
 
-/*设置外面的"舞台"*/
-.my-container {
+/**{margin:0;padding:0;}*/
+/*li{list-style:none outside none;}*/
+/*body{background:url(../images/rbg.jpg) repeat scroll 0 0 #aaa;font-family:"宋体";padding:50px 0 300px;}*/
+
+.box {
     width: 1000px;
+    margin: 0 auto 20px;
     height: 500px;
-    margin: auto;
-    background-color: grey;
+    background: #3bb3e0;
+    border: 5px solid #2561b4;
 }
 
-/*设置拖放的内容*/
-.my-drag {
-    position: relative;
-    width: 50px;
-    height: 50px;
-    background-color: darkcyan;
-    margin: auto;
+p {
+    font-size: 20px;
+    color: #333;
+    text-align: center;
+    margin: 0 0 20px;
+}
+
+.box.box-1 {
+    height: 200px
+}
+
+.box-1 dl {
+    top: 25px;
+}
+
+.box.box-2 {
+    height: 500px
+}
+
+.box-2 dl {
+    left: 50%;
+    margin-left: -75px;
+}
+
+i.hander {
+    display: block;
+    width: 100%;
+    height: 25px;
+    background: #ccc;
+    text-align: center;
+    font-size: 12px;
+    color: #333;
+    line-height: 25px;
+    font-style: normal;
+}
+
+.border-1 {
+    border: 10px solid #2561b4;
+}
+
+.border-2 {
+    border: 10px solid yellow;
+}
+
+input, textarea {
+    width: 150px;
+    display: block;
+    margin: 5px 0;
+    border: 2px solid #333;
+    background: #ccc;
+}
+
+.testSize {
+    padding: 10px;
+    background: #2561b4;
 }
 
 /*endregion*/

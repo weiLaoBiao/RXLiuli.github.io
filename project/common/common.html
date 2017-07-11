@@ -6,10 +6,72 @@
     <link rel="stylesheet" href="css/common.css"/>
     <!--导入 jQuery 库-->
     <script src="js/jquery-3.2.1.js"></script>
+    <!--自定义的公共类库 css 文件-->
     <script src="js/common.js"></script>
+
     <!--<base href="javascript:void(0)" target="_self"/>-->
 </head>
 <body>
+
+<!--region 简易QQ-->
+
+<section id="chat">
+    <div class="chatBody">
+        <!--原型-->
+        <div class="prototype">
+            <img src="images/head02.jpg"/>
+            <div>
+                <h4>RXLiuli</h4>
+                <p>发送的消息fsaf sdaaaaaaadsafsdaaa aaaadsaf sdaaaaaaadfa</p>
+            </div>
+        </div>
+    </div>
+    <div><img src="images/icon.jpg"></div>
+    <textarea class="chatText" title="输入框"></textarea>
+    <div class="btn"><span>关闭(C)</span><span id="send">发送(S)</span></div>
+</section>
+
+<!--endregion-->
+
+<!--region 拨动开关-->
+
+<label class="switch">
+    <input type="checkbox"/>
+    <div class="slider"></div>
+</label>
+<br/><br/>
+
+<!--endregion-->
+
+<!--region 弹性盒子布局(垂直)-->
+
+<div class="flex-container-03">
+    <div class="flex-item-03">flex-item-01</div>
+    <div class="flex-item-03">flex-item-02</div>
+    <div class="flex-item-03">flex-item-03</div>
+</div>
+
+<!--endregion-->
+
+<!--region 弹性盒子布局(水平-02)-->
+
+<div class="flex-container-02">
+    <div class="flex-item-02 item-02-01">flex-item-01</div>
+    <div class="flex-item-02">flex-item-02</div>
+    <div class="flex-item-02">flex-item-03</div>
+</div>
+
+<!--endregion-->
+
+<!--region 弹性盒子布局(水平)-->
+
+<div class="flex-container">
+    <div class="flex-item item1">flex: 2</div>
+    <div class="flex-item item2">flex: 1</div>
+    <div class="flex-item item3">flex: 1</div>
+</div>
+
+<!--endregion-->
 
 <!--region toggle 事件（未完成）-->
 
@@ -90,10 +152,35 @@
 
 <!--region jQuery 拖动（未完成）-->
 
-<div class="my-container">
-    <div class="my-drag"></div>
+<p>水平拖动</p>
+<div class='box box-1'>
+    <dl><img src="img/01.jpg" width=150 height=150 ></dl>
 </div>
-<br/>
+<p>垂直拖动</p>
+<div class='box box-2'>
+    <dl><img src="img/02.jpg" width=150 height=150></dl>
+</div>
+<p>自由拖动，初始位置固定（<button class='ck'>点击图片放大以扩展div大小</button>）</p>
+<div class='box box-3'>
+    <dl><img src="img/03.jpg" width=150 height=150></dl>
+</div>
+<p>自动拖动，初始位置随机</p>
+<div class='box box-4'>
+    <dl><img src="img/04.jpg" width=150 height=150 class='border-1'></dl>
+    <dl class='testSize'>
+        <input type='text' placeholder='测试可点击'>
+        <textarea placeholder='测试可点击'></textarea>
+    </dl>
+    <dl><img src="img/06.jpg" width=150 height=150 class='border-2'></dl>
+    <dl><img src="img/07.jpg" width=150 height=150></dl>
+</div>
+<p>自动拖动，初始位置随机，hander拖动</p>
+<div class='box box-5'>
+    <dl><i class='hander'>拖我</i><img src="img/04.jpg" width=150 height=150></dl>
+    <dl><i class='hander'>拖我</i><img src="img/05.jpg" width=150 height=150></dl>
+    <dl><i class='hander'>拖我</i><img src="img/06.jpg" width=150 height=150></dl>
+    <dl><i class='hander'>拖我</i><img src="img/07.jpg" width=150 height=150></dl>
+</div>
 
 <!--endregion-->
 
