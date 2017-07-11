@@ -2,13 +2,16 @@
 
 /*region toggle 事件*/
 
-.toggle-content {
+/*内容*/
+.toggle-content-02 {
     width: 200px;
     height: 200px;
     background-color: grey;
+    cursor: pointer;
     margin: auto;
 }
 
+/*按钮*/
 .toggle-btn {
     display: block;
     margin: auto;
@@ -17,7 +20,6 @@
 /*endregion*/
 
 /*region 动画搜索表单*/
-
 /*设置搜索框的属性*/
 .animate-search {
     width: 300px;
@@ -913,6 +915,8 @@ a:hover {
 /*一般而言 body（即网页整体） 需要居中显示*/
 body {
     margin: 0 auto;
+    /*强制换行(包括单词)*/
+    /*word-break: break-all;*/
 }
 
 /*endregion*/

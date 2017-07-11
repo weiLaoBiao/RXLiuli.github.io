@@ -2,24 +2,6 @@
  * Created by rxliuli on 17-7-3.
  */
 
-//toggle 流事件
-
-$(document).ready(function () {
-    $(".toggle-content").toggle(
-        function () {
-            $(".toggle-content").css("background-color", "green");
-        },
-        function () {
-            $(".toggle-content").css("background-color", "red");
-        },
-        function () {
-            $(".toggle-content").css("background-color", "green");
-        }
-    );
-});
-
-//endregion
-
 //region 回到顶部
 
 $(document).ready(function () {
@@ -30,11 +12,32 @@ $(document).ready(function () {
 
 
     //页面每次重新加载都回到最顶端(为了消除浏览器有时候无法回到顶端的问题还是暂且加上吧)
-    backToTop();
+    //使用 trigger 模拟触发单击事件
+    $("img.backToTop").trigger("click");
     function backToTop() {
         var $html = $(" html");
         $html.animate({scrollTop: 0}, $html.attr("height"));
     }
+});
+
+//endregion
+
+//使用 原型,clone(复制)和 append(追加) 去操作 DOM 节点
+//最后一个节点的事件 复制?!
+
+//region toggle 流事件
+
+$(document).ready(function () {
+    //直接被触发了....
+    $(".toggle-btn").toggle(
+        function () {
+            $(".toggle-content-02").show().css("backgroundColor", "red");
+        }, function () {
+            $(".toggle-content-02").show().css("backgroundColor", "blue");
+        }
+    );
+
+
 });
 
 //endregion
