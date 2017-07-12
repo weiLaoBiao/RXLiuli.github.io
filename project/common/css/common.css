@@ -1,5 +1,20 @@
 /**/
 
+/*region 文字滚动*/
+
+#slide-scroll {
+    /*遇到问题可以将之设置为 absolute */
+    position: relative;
+    height: 300px;
+    width: 260px;
+    color: #FA8E93;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    margin: 10px auto;
+}
+
+/*endregion*/
+
 /*region 简易QQ*/
 
 /*region 老师的*/

@@ -13,6 +13,65 @@
 </head>
 <body>
 
+<!--region js 实现的无缝滚动-->
+
+    <div id="slide-scroll">
+        <ul id="slide-scroll-01">
+            <li>・2010考研英语大纲到货75折...</li>
+            <li>・权威定本四大名著（人民文...</li>
+            <li>・口述历史权威唐德刚先生国...</li>
+            <li>・袁伟民与体坛风云：实话实...</li>
+            <li>・我们台湾这些年：轰动两岸...</li>
+            <li>・畅销教辅推荐：精品套书50...</li>
+            <li>・2010版法律硕士联考大纲75...</li>
+            <li>・计算机新书畅销书75折抢购</li>
+            <li>・2009年孩子最喜欢的书&gt;&gt;</li>
+            <li>・弗洛伊德作品精选集59折</li>
+            <li>・2010考研英语大纲到货75折...</li>
+            <li>・权威定本四大名著（人民文...</li>
+            <li>・口述历史权威唐德刚先生国...</li>
+            <li>・袁伟民与体坛风云：实话实...</li>
+            <li>・我们台湾这些年：轰动两岸...</li>
+            <li>・畅销教辅推荐：精品套书50...</li>
+            <li>・2010版法律硕士联考大纲75...</li>
+            <li>・计算机新书畅销书75折抢购</li>
+            <li>・2009年孩子最喜欢的书&gt;&gt;</li>
+            <li>・弗洛伊德作品精选集59折</li>
+            <li>・2010考研英语大纲到货75折...</li>
+            <li>・权威定本四大名著（人民文...</li>
+            <li>・口述历史权威唐德刚先生国...</li>
+            <li>・袁伟民与体坛风云：实话实...</li>
+            <li>・我们台湾这些年：轰动两岸...</li>
+            <li>・畅销教辅推荐：精品套书50...</li>
+            <li>・2010版法律硕士联考大纲75...</li>
+            <li>・计算机新书畅销书75折抢购</li>
+            <li>・2009年孩子最喜欢的书&gt;&gt;</li>
+            <li>・弗洛伊德作品精选集59折</li>
+            <li>・2010考研英语大纲到货75折...</li>
+            <li>・权威定本四大名著（人民文...</li>
+            <li>・口述历史权威唐德刚先生国...</li>
+            <li>・袁伟民与体坛风云：实话实...</li>
+            <li>・我们台湾这些年：轰动两岸...</li>
+            <li>・畅销教辅推荐：精品套书50...</li>
+            <li>・2010版法律硕士联考大纲75...</li>
+            <li>・计算机新书畅销书75折抢购</li>
+            <li>・2009年孩子最喜欢的书&gt;&gt;</li>
+            <li>・弗洛伊德作品精选集59折</li>
+        </ul>
+        <ul id="slide-scroll-02"></ul>
+    </div>
+
+<!--endregion-->
+
+<!--region Html5 滚动标签(已废弃)-->
+
+<marquee direction="up" behavior="scroll" scrollamount="1" scrolldelay="0" loop="-1" width="200" height="50"
+         bgcolor="#0099FF" hspace="10" vspace="10">
+    (1):指整个Marquee对齐方式; (2)behavior:设置滚动的方式: scroll:表示由一端滚动到另一端,会重复,缺陷是不能无缝滚动。 slide:表示由一段滚动到另一端,不会重复...
+</marquee>
+
+<!--endregion-->
+
 <!--region 简易QQ-->
 
 <section id="chat">
@@ -154,32 +213,35 @@
 
 <p>水平拖动</p>
 <div class='box box-1'>
-    <dl><img src="img/01.jpg" width=150 height=150 ></dl>
+    <dl><img src="images/01.jpg" width=150 height=150></dl>
 </div>
 <p>垂直拖动</p>
 <div class='box box-2'>
-    <dl><img src="img/02.jpg" width=150 height=150></dl>
+    <dl><img src="images/02.jpg" width=150 height=150></dl>
 </div>
-<p>自由拖动，初始位置固定（<button class='ck'>点击图片放大以扩展div大小</button>）</p>
+<p>自由拖动，初始位置固定（
+    <button class='ck'>点击图片放大以扩展div大小</button>
+    ）
+</p>
 <div class='box box-3'>
-    <dl><img src="img/03.jpg" width=150 height=150></dl>
+    <dl><img src="images/03.jpg" width=150 height=150></dl>
 </div>
 <p>自动拖动，初始位置随机</p>
 <div class='box box-4'>
-    <dl><img src="img/04.jpg" width=150 height=150 class='border-1'></dl>
+    <dl><img src="images/04.jpg" width=150 height=150 class='border-1'></dl>
     <dl class='testSize'>
         <input type='text' placeholder='测试可点击'>
         <textarea placeholder='测试可点击'></textarea>
     </dl>
-    <dl><img src="img/06.jpg" width=150 height=150 class='border-2'></dl>
-    <dl><img src="img/07.jpg" width=150 height=150></dl>
+    <dl><img src="images/06.jpg" width=150 height=150 class='border-2'></dl>
+    <dl><img src="images/07.jpg" width=150 height=150></dl>
 </div>
 <p>自动拖动，初始位置随机，hander拖动</p>
 <div class='box box-5'>
-    <dl><i class='hander'>拖我</i><img src="img/04.jpg" width=150 height=150></dl>
-    <dl><i class='hander'>拖我</i><img src="img/05.jpg" width=150 height=150></dl>
-    <dl><i class='hander'>拖我</i><img src="img/06.jpg" width=150 height=150></dl>
-    <dl><i class='hander'>拖我</i><img src="img/07.jpg" width=150 height=150></dl>
+    <dl><i class='hander'>拖我</i><img src="images/04.jpg" width=150 height=150></dl>
+    <dl><i class='hander'>拖我</i><img src="images/05.jpg" width=150 height=150></dl>
+    <dl><i class='hander'>拖我</i><img src="images/06.jpg" width=150 height=150></dl>
+    <dl><i class='hander'>拖我</i><img src="images/07.jpg" width=150 height=150></dl>
 </div>
 
 <!--endregion-->

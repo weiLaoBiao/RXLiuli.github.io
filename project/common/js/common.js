@@ -25,6 +25,75 @@ $(document).ready(function () {
 //使用 原型,clone(复制)和 append(追加) 去操作 DOM 节点
 //最后一个节点的事件 复制?!
 
+//region 自动滚动
+
+$(document).ready(function () {
+
+
+    //使用 jQuery 实现的滚动
+    //滚动速度
+    var speed = 40;
+    //三个需要操作的元素
+    var $slide = $("#slide-scroll");
+    var $slide01 = $("#slide-scroll-01");
+    var $slide02 = $("#slide-scroll-02");
+    $slide02.html($slide01.html());
+
+    //具体的滚动功能的实现
+    function marquee() {
+        //DOM 独有的方法???
+        if ($slide.get(0).scrollTop >= $slide02.get(0).offsetHeight)
+            $slide.get(0).scrollTop -= $slide02.get(0).offsetHeight;
+        else
+            $slide.get(0).scrollTop++
+        //注: 因为 offsetHeight 是 DOM 对象的独有属性,所以只能转换成 DOM 对象后才能正常使用
+        // 而 scrollTop 虽然有 scrollTop() 方法可以获取及设置 scrollTop 的值,然而并不是很方便
+    }
+
+    //设置计时器自动滚动,并且鼠标时滚动停止
+    var timer02 = setInterval(marquee, speed);
+    $slide.hover(function () {
+        clearInterval(timer02)
+    }, function () {
+        timer02 = setInterval(marquee, speed);
+    });
+
+
+    //以下为纯 JavaScript 实现的解决方案:
+    // // 滚动速度
+    // var speed = 40;
+    // var slide = document.getElementById("slide-scroll");
+    // var slide01 = document.getElementById("slide-scroll-01");
+    // var slide02 = document.getElementById("slide-scroll-02");
+    // //让两个 div 中的文本相同
+    // slide02.innerHTML = slide01.innerHTML;
+    //
+    // function Marquee() {
+    //     //如果 slide2 的偏移高度小于 slide(父元素)的卷上去的高度
+    //     if (slide02.offsetTop <= slide.scrollTop)
+    //     //就将卷上去的高度清空(减去卷上去的高度)
+    //         slide.scrollTop -= slide01.offsetHeight;
+    //     else {
+    //         //否则每次 ++
+    //         slide.scrollTop++
+    //     }
+    // }
+    //
+    // //设置计时器自动滚动,并且鼠标时滚动停止
+    // var MyMar = setInterval(Marquee, speed);
+    // slide.onmouseover = function () {
+    //     clearInterval(MyMar)
+    // };
+    //
+    // slide.onmouseout = function () {
+    //     MyMar = setInterval(Marquee, speed)
+    // };
+
+});
+
+
+//endregion
+
 //region 简易QQ
 
 $(document).ready(function () {
@@ -130,7 +199,7 @@ $(document).ready(function () {
 
 $.fn.extend({
     //---元素拖动插件
-    dragging:function(data){
+    dragging: function (data) {
         var $this = $(this);
         var xPage;
         var yPage;
@@ -140,70 +209,70 @@ $.fn.extend({
         var yRand = 0;//
         var father = $this.parent();
         var defaults = {
-            move : 'both',
-            randomPosition : true ,
-            hander:1
+            move: 'both',
+            randomPosition: true,
+            hander: 1
         }
-        var opt = $.extend({},defaults,data);
+        var opt = $.extend({}, defaults, data);
         var movePosition = opt.move;
         var random = opt.randomPosition;
 
         var hander = opt.hander;
 
-        if(hander == 1){
+        if (hander == 1) {
             hander = $this;
-        }else{
+        } else {
             hander = $this.find(opt.hander);
         }
 
 
         //---初始化
-        father.css({"position":"relative","overflow":"hidden"});
-        $this.css({"position":"absolute"});
-        hander.css({"cursor":"move"});
-        $this.find('*').not('img').mousedown(function(e) {
+        father.css({"position": "relative", "overflow": "hidden"});
+        $this.css({"position": "absolute"});
+        hander.css({"cursor": "move"});
+        $this.find('*').not('img').mousedown(function (e) {
             e.stopPropagation();
         });
 
         var faWidth = father.width();
         var faHeight = father.height();
-        var thisWidth = $this.width()+parseInt($this.css('padding-left'))+parseInt($this.css('padding-right'))+parseInt($this.css('border-left-width'))+parseInt($this.css('border-right-width'));
-        var thisHeight = $this.height()+parseInt($this.css('padding-top'))+parseInt($this.css('padding-bottom'))+parseInt($this.css('border-top-width'))+parseInt($this.css('border-bottom-width'));
+        var thisWidth = $this.width() + parseInt($this.css('padding-left')) + parseInt($this.css('padding-right')) + parseInt($this.css('border-left-width')) + parseInt($this.css('border-right-width'));
+        var thisHeight = $this.height() + parseInt($this.css('padding-top')) + parseInt($this.css('padding-bottom')) + parseInt($this.css('border-top-width')) + parseInt($this.css('border-bottom-width'));
 
         var mDown = false;//
         var positionX;
         var positionY;
-        var moveX ;
-        var moveY ;
+        var moveX;
+        var moveY;
 
-        if(random){
+        if (random) {
             $thisRandom();
         }
-        function $thisRandom(){ //随机函数
-            $this.each(function(index){
-                var randY = parseInt(Math.random()*(faHeight-thisHeight));///
-                var randX = parseInt(Math.random()*(faWidth-thisWidth));///
-                if(movePosition.toLowerCase() == 'x'){
+        function $thisRandom() { //随机函数
+            $this.each(function (index) {
+                var randY = parseInt(Math.random() * (faHeight - thisHeight));///
+                var randX = parseInt(Math.random() * (faWidth - thisWidth));///
+                if (movePosition.toLowerCase() == 'x') {
                     $(this).css({
-                        left:randX
+                        left: randX
                     });
-                }else if(movePosition.toLowerCase() == 'y'){
+                } else if (movePosition.toLowerCase() == 'y') {
                     $(this).css({
-                        top:randY
+                        top: randY
                     });
-                }else if(movePosition.toLowerCase() == 'both'){
+                } else if (movePosition.toLowerCase() == 'both') {
                     $(this).css({
-                        top:randY,
-                        left:randX
+                        top: randY,
+                        left: randX
                     });
                 }
 
             });
         }
 
-        hander.mousedown(function(e){
-            father.children().css({"zIndex":"0"});
-            $this.css({"zIndex":"1"});
+        hander.mousedown(function (e) {
+            father.children().css({"zIndex": "0"});
+            $this.css({"zIndex": "1"});
             mDown = true;
             X = e.pageX;
             Y = e.pageY;
@@ -212,76 +281,77 @@ $.fn.extend({
             return false;
         });
 
-        $(document).mouseup(function(e){
+        $(document).mouseup(function (e) {
             mDown = false;
         });
 
-        $(document).mousemove(function(e){
+        $(document).mousemove(function (e) {
             faWidth = father.width();
             faHeight = father.height();
-            thisWidth = $this.width()+parseInt($this.css('padding-left'))+parseInt($this.css('padding-right'))+parseInt($this.css('border-left-width'))+parseInt($this.css('border-right-width'));
-            thisHeight = $this.height()+parseInt($this.css('padding-top'))+parseInt($this.css('padding-bottom'))+parseInt($this.css('border-top-width'))+parseInt($this.css('border-bottom-width'));
+            thisWidth = $this.width() + parseInt($this.css('padding-left')) + parseInt($this.css('padding-right')) + parseInt($this.css('border-left-width')) + parseInt($this.css('border-right-width'));
+            thisHeight = $this.height() + parseInt($this.css('padding-top')) + parseInt($this.css('padding-bottom')) + parseInt($this.css('border-top-width')) + parseInt($this.css('border-bottom-width'));
             xPage = e.pageX;//--
-            moveX = positionX+xPage-X;
+            moveX = positionX + xPage - X;
 
             yPage = e.pageY;//--
-            moveY = positionY+yPage-Y;
+            moveY = positionY + yPage - Y;
 
-            function thisXMove(){ //x轴移动
-                if(mDown == true){
-                    $this.css({"left":moveX});
-                }else{
+            function thisXMove() { //x轴移动
+                if (mDown == true) {
+                    $this.css({"left": moveX});
+                } else {
                     return;
                 }
-                if(moveX < 0){
-                    $this.css({"left":"0"});
+                if (moveX < 0) {
+                    $this.css({"left": "0"});
                 }
-                if(moveX > (faWidth-thisWidth)){
-                    $this.css({"left":faWidth-thisWidth});
+                if (moveX > (faWidth - thisWidth)) {
+                    $this.css({"left": faWidth - thisWidth});
                 }
                 return moveX;
             }
 
-            function thisYMove(){ //y轴移动
-                if(mDown == true){
-                    $this.css({"top":moveY});
-                }else{
+            function thisYMove() { //y轴移动
+                if (mDown == true) {
+                    $this.css({"top": moveY});
+                } else {
                     return;
                 }
-                if(moveY < 0){
-                    $this.css({"top":"0"});
+                if (moveY < 0) {
+                    $this.css({"top": "0"});
                 }
-                if(moveY > (faHeight-thisHeight)){
-                    $this.css({"top":faHeight-thisHeight});
+                if (moveY > (faHeight - thisHeight)) {
+                    $this.css({"top": faHeight - thisHeight});
                 }
                 return moveY;
             }
 
-            function thisAllMove(){ //全部移动
-                if(mDown == true){
-                    $this.css({"left":moveX,"top":moveY});
-                }else{
+            function thisAllMove() { //全部移动
+                if (mDown == true) {
+                    $this.css({"left": moveX, "top": moveY});
+                } else {
                     return;
                 }
-                if(moveX < 0){
-                    $this.css({"left":"0"});
+                if (moveX < 0) {
+                    $this.css({"left": "0"});
                 }
-                if(moveX > (faWidth-thisWidth)){
-                    $this.css({"left":faWidth-thisWidth});
+                if (moveX > (faWidth - thisWidth)) {
+                    $this.css({"left": faWidth - thisWidth});
                 }
 
-                if(moveY < 0){
-                    $this.css({"top":"0"});
+                if (moveY < 0) {
+                    $this.css({"top": "0"});
                 }
-                if(moveY > (faHeight-thisHeight)){
-                    $this.css({"top":faHeight-thisHeight});
+                if (moveY > (faHeight - thisHeight)) {
+                    $this.css({"top": faHeight - thisHeight});
                 }
             }
-            if(movePosition.toLowerCase() == "x"){
+
+            if (movePosition.toLowerCase() == "x") {
                 thisXMove();
-            }else if(movePosition.toLowerCase() == "y"){
+            } else if (movePosition.toLowerCase() == "y") {
                 thisYMove();
-            }else if(movePosition.toLowerCase() == 'both'){
+            } else if (movePosition.toLowerCase() == 'both') {
                 thisAllMove();
             }
         });
