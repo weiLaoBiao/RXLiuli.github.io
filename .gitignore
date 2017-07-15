@@ -1,6 +1,7 @@
 *.class
 *.log
-/out/
+target/
+out/
 *.idea/
 *.xml
 *.swp

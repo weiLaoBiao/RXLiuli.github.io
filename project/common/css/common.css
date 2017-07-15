@@ -1123,32 +1123,32 @@ button.accordion:active, button.accordion:hover {
 
 /*endregion*/
 
-/*region 顶部导航栏*/
+/*region 导航菜单栏*/
 
-.nav-top {
+.nav-menu {
     border-bottom: solid 2px orangered;
 }
 
 /*设置水平对齐方式*/
-.nav-top ul {
+.nav-menu ul {
     display: flex;
     justify-content: center;
 }
 
 /*设置 ul 中的文字大小*/
-.nav-top ul {
+.nav-menu ul {
     font-size: 18px;
 }
 
 /*设置 a 标签的大小*/
-.nav-top ul li a {
+.nav-menu ul li a {
     display: block;
     padding: 10px 20px;
     text-align: center;
 }
 
 /*设置 a 标签的悬浮时改变背景色和颜色*/
-.nav-top ul li a:hover {
+.nav-menu ul li a:hover {
     background-color: orangered;
     color: white;
     transition: all 1s;
