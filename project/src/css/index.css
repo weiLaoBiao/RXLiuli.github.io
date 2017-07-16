@@ -1,0 +1,169 @@
+/*region 顶部的 logo*/
+
+/*大体布局*/
+.w3-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.w3-row.top {
+    height: 70px;
+    padding: 0 10px;
+}
+
+/*设置左边的 logo */
+.w3schools-logo, .dot-com {
+    font-size: 35px;
+    font-weight: bolder;
+}
+
+.w3schools-logo {
+    color: #555555;
+}
+
+.w3schools-logo .dot-com {
+    color: #4caf50;
+}
+
+/*设置右边的说明文字*/
+.w3-right {
+    font-size: 20px;
+    letter-spacing: 0.3em;
+}
+
+/*endregion*/
+
+/*region 导航栏菜单*/
+
+/*整体布局*/
+.top-nav-menu {
+    padding: 0 10px;
+    background-color: #4caf50;
+}
+
+/*设置导航栏菜单的 a 链接的属性*/
+.top-nav-menu a {
+    color: white;
+    font-size: 20px;
+    padding: 20px 10px;
+    height: 30px; /*此处的高度是一个补充,防止受到字体本身的高度影响(比如 "a" 和 "我" 高度就是不同的)*/
+    background-color: #4caf50;
+    transition: all 0.5s;
+    /*之所以在内部又设置了弹性盒子,是因为需要居中对齐文字与三角形*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-nav-menu a:hover {
+    background-color: white;
+    color: #4caf50;
+}
+
+/*设置只有第一个 a 元素位于左侧,将其他元素全部"挤到"右侧*/
+.w3-left {
+    margin-right: auto;
+}
+
+/*实现三角形*/
+.caret-down, .caret-up {
+    width: 0;
+    height: 0;
+    border-left: solid 7px transparent;
+    border-right: solid 7px transparent;
+    margin: auto 5px;
+}
+
+.caret-down {
+    border-top: solid 7px white;
+}
+
+.caret-up {
+    border-bottom: solid 7px white;
+}
+
+.top-nav-menu a:hover span {
+    border-top-color: #4caf50;
+    border-bottom-color: #4caf50;
+}
+
+/*endregion*/
+
+/*region 教程,参考 和 示例*/
+
+/*设置教程的整体布局*/
+#nav_tutorials, #nav_references, #nav_examples {
+    width: 100%;
+    padding-left: 10px;
+    background-color: #f1f1f1;
+    box-shadow: 0 0 10px 0 grey;
+    display: none;
+}
+
+/*设置关闭按钮*/
+.icon-close {
+    display: inline-block;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    line-height: 30px;
+    height: 30px;
+    padding: 10px;
+    cursor: pointer;
+    /*!*定位实现(太过于危险!!!)*!*/
+    /*position: absolute;*/
+    /*right: 0;*/
+    /*top: 0;*/
+    /*浮动*/
+    float: right;
+    margin-right: 10px;
+    transition: 0.5s;
+}
+
+.icon-close:hover {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/*设置 "列" w3-col / m3 的整体布局*/
+.w3-col {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.m3, .m4 {
+    /*之所以不使用弹性盒子布局的原因在于*/
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/*分歧点*/
+.m3 {
+    width: calc((100% - 80px) / 3);
+}
+
+.m4 {
+    width: calc((100% - 80px) / 4);
+}
+
+/*设置 "列" 中的标题和内容*/
+.m3 h1, .m4 h1 {
+    margin: 10px 0;
+    font-size: 22px;
+}
+
+.m3 a, .m4 a {
+    font-size: 16px;
+    color: #787878;
+}
+
+.m3 a:hover, .m4 :hover {
+    text-decoration-line: underline;
+    color: orangered;
+}
+
+/*endregion*/

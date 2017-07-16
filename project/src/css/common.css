@@ -1,0 +1,33 @@
+/*region 通用*/
+
+* {
+    /*为了浏览器的兼容，还是删除所有默认的内外边距吧*/
+    margin: 0;
+    padding: 0;
+    /*一般而言网页中的默认字体是 14px*/
+    font-size: 14px;
+    /*其实在很多时候强制换行(包括单词)也是可行的一种解决方案*/
+    /*word-break: break-all;*/
+}
+
+/*一般而言 html,body（即网页整体）需要居中显示*/
+html, body {
+    margin: auto;
+}
+
+/*使用无序列表一般不需要前面的符号*/
+li {
+    list-style-type: none;
+}
+
+/*a 标签默认的下划线是不需要的*/
+a {
+    text-decoration: none;
+}
+
+/*一般而言链接在鼠标悬浮时会变成红色(已废弃)*/
+a:hover {
+    color: orangered;
+}
+
+/*endregion*/

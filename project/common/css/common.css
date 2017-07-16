@@ -1125,30 +1125,30 @@ button.accordion:active, button.accordion:hover {
 
 /*region 导航菜单栏*/
 
-.nav-menu {
+.top-nav-menu {
     border-bottom: solid 2px orangered;
 }
 
 /*设置水平对齐方式*/
-.nav-menu ul {
+.top-nav-menu ul {
     display: flex;
     justify-content: center;
 }
 
 /*设置 ul 中的文字大小*/
-.nav-menu ul {
+.top-nav-menu ul {
     font-size: 18px;
 }
 
 /*设置 a 标签的大小*/
-.nav-menu ul li a {
+.top-nav-menu ul li a {
     display: block;
     padding: 10px 20px;
     text-align: center;
 }
 
 /*设置 a 标签的悬浮时改变背景色和颜色*/
-.nav-menu ul li a:hover {
+.top-nav-menu ul li a:hover {
     background-color: orangered;
     color: white;
     transition: all 1s;
@@ -1158,10 +1158,19 @@ button.accordion:active, button.accordion:hover {
 
 /*region 通用*/
 
-/*为了浏览器的兼容，还是删除所有默认的内外边距吧*/
 * {
+    /*为了浏览器的兼容，还是删除所有默认的内外边距吧*/
     margin: 0;
     padding: 0;
+    /*一般而言网页中的默认字体是 14px*/
+    font-size: 14px;
+    /*其实在很多时候强制换行(包括单词)也是可行的一种解决方案*/
+    /*word-break: break-all;*/
+}
+
+/*一般而言 html,body（即网页整体）需要居中显示*/
+html, body {
+    margin: auto;
 }
 
 /*使用无序列表一般不需要前面的符号*/
@@ -1174,16 +1183,9 @@ a {
     text-decoration: none;
 }
 
-/*一般而言链接在鼠标悬浮时会变成红色*/
+/*一般而言链接在鼠标悬浮时会变成红色(已废弃)*/
 a:hover {
-    /*color: orangered;*/
-}
-
-/*一般而言 body（即网页整体） 需要居中显示*/
-body {
-    margin: 0 auto;
-    /*强制换行(包括单词)*/
-    /*word-break: break-all;*/
+    color: orangered;
 }
 
 /*endregion*/
