@@ -29,6 +29,8 @@ $(document).ready(function () {
 
 $(document).ready(function () {
 
+    //注: jQuery对象中的 offset() 方法返回了元素与顶端/左侧的距离
+    //例: $(selector).offset().top 获取与顶端的距离
 
     //使用 jQuery 实现的滚动
     //滚动速度

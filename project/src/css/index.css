@@ -1,14 +1,14 @@
 /*region 顶部的 logo*/
 
 /*大体布局*/
-.w3-row {
+.rx-row {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
 
-.w3-row.top {
+.rx-row.top {
     height: 70px;
     padding: 0 10px;
 }
@@ -128,7 +128,7 @@
 }
 
 /*设置 "列" w3-col / m3 的整体布局*/
-.w3-col {
+.rx-col {
     display: inline-flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -164,6 +164,267 @@
 .m3 a:hover, .m4 :hover {
     text-decoration-line: underline;
     color: orangered;
+}
+
+/*endregion*/
+
+/*region main 主体内容*/
+
+main {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+/*region 侧边栏*/
+
+/*整体布局*/
+#side-menu {
+    width: 0;
+    opacity: 0;
+    overflow-x: hidden;
+    min-height: 100%;
+    box-shadow: 5px 0 5px 0 grey;
+    z-index: 1;
+}
+
+/*关闭按钮*/
+#side-menu .icon-close {
+    margin-right: 0;
+}
+
+/*设置菜单的整体布局*/
+#side-menu section {
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+/*设置文字强制不换行*/
+#side-menu section * {
+    white-space: nowrap;
+}
+
+/*设置侧边菜单栏的标题和内容*/
+#side-menu h1 {
+    padding-left: 10px;
+    margin: 10px 0;
+    font-size: 22px;
+}
+
+#side-menu a {
+    padding-left: 10px;
+    display: block;
+    font-size: 16px;
+    color: #787878;
+    /*width: 100%;*/
+    transition: all 0.5s;
+}
+
+#side-menu a:hover {
+    background-color: #cccccc;
+}
+
+/*endregion*/
+
+/*region #main 设置网页的主要内容的整体布局*/
+#main {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/*设置偶数行的背景颜色*/
+#main section:nth-child(even) {
+    background-color: #f1f1f1;
+}
+
+/*设置 html 块的内容*/
+.about {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /*不用固定高度的原因在于实现弹性盒子的可能性*/
+    /*height: 450px;*/
+}
+
+.about > div {
+    flex: 1;
+    padding: 80px;
+}
+
+/*region 设置教程分类的内容*/
+
+/*设置按钮*/
+.rx-btn {
+    display: inline-block;
+    padding: 5px 10px;
+    transition: all 0.5s;
+}
+
+.rx-btn:hover {
+    box-shadow: 0 5px 10px 0 grey;
+}
+
+/*设置两边按钮的独有属性*/
+.about-content .rx-btn, .about-codes .rx-btn {
+    color: white;
+    font-size: 16px;
+}
+
+/*左边按钮独有属性*/
+.about-content .rx-btn {
+    margin: 20px 5px;
+    background-color: #555555;
+}
+
+/*右边按钮独有属性*/
+.about-codes .rx-btn {
+    background-color: #4caf50;
+}
+
+/*设置居中*/
+.rx-center * {
+    text-align: center;
+    margin: auto;
+}
+
+/*设置标题*/
+.about .about-content header * {
+    font-size: 80px;
+    font-weight: normal;
+    color: #555555;
+}
+
+/*设置中部简介内容*/
+.about p {
+    font-size: 25px;
+    color: #555555;
+}
+
+/*endregion*/
+
+/*region 设置教程的示例代码*/
+
+.about-codes > div {
+    /*height: 350px;*/
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 slategrey;
+}
+
+/*设置示例代码的标题*/
+.about-codes header * {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+/*代码部分*/
+.about-codes pre {
+    background-color: white;
+    border-left: solid 5px #4caf50;
+    padding: 1em;
+    margin: 15px auto;
+}
+
+.about-codes pre, .about-codes pre * {
+    font-size: 16px;
+}
+
+/*设置代码部分标签关键字的颜色*/
+.blue {
+    color: blue;
+}
+
+.darkred {
+    color: darkred;
+}
+
+.red {
+    color: red;
+}
+
+/*endregion*/
+
+/*region 设置下面的那些教程*/
+
+/*整体布局*/
+.about-02 {
+    padding: 80px;
+}
+
+/*设置每个内容的相关布局和属性*/
+.about-content-02 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*height: 250px;*/
+    min-width: 25%;
+    padding: 30px;
+    background-color: white;
+    box-shadow: 0 0 10px 0 grey;
+    border-radius: 5px;
+}
+
+.about-content-02 header h1 {
+    font-size: 40px;
+    font-weight: normal;
+}
+
+/*设置按钮*/
+.about-content-02 .rx-btn {
+    color: white;
+    font-size: 16px;
+    transition: all 0.5s;
+}
+
+.about-content-02 .rx-btn:hover {
+    box-shadow: 0 5px 10px 0 grey;
+}
+
+.about-content-02 p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+/*左边按钮独有属性*/
+.about-content-02 .rx-btn {
+    margin: 20px 5px;
+    background-color: #555555;
+}
+
+/*endregion*/
+
+/*endregion*/
+
+/*endregion*/
+
+/*region 尾部*/
+#home-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f6f6f6;
+    padding: 30px;
+}
+
+/*设定按钮的属性*/
+#home-footer .rx-btn {
+    color: white;
+    font-size: 16px;
+    padding: 5px 10px;
+    background-color: #9f9f9f;
+    transition: all 0.5s;
+}
+
+/*设置版权文字的相关属性*/
+#home-footer aside {
+    color: #656565;
+    text-align: center;
+    margin: 20px 0;
 }
 
 /*endregion*/

@@ -746,163 +746,163 @@ input[type=checkbox].w3-check:disabled + .w3-validate, input[type=radio].w3-radi
     overflow-x: auto
 }
 
-.w3-container-4:after, .w3-container-8:after, .w3-container-12:after, .w3-row:after, .w3-container-16:after,
+.w3-container-4:after, .w3-container-8:after, .w3-container-12:after, .rx-row:after, .w3-container-16:after,
 .w3-container-24:after, .w3-container-32:after, .w3-container-48:after, .w3-container-64:after,
-.w3-row:after, .w3-row-padding:after, .w3-topnav:after, .w3-clear:after, .w3-btn-group:before, .w3-btn-group:after {
+.rx-row:after, .w3-row-padding:after, .w3-topnav:after, .w3-clear:after, .w3-btn-group:before, .w3-btn-group:after {
     content: "";
     display: table;
     clear: both
 }
 
-.w3-col, .w3-half, .w3-third, .w3-twothird, .w3-threequarter, .w3-quarter {
+.rx-col, .w3-half, .w3-third, .w3-twothird, .w3-threequarter, .w3-quarter {
     float: left;
     width: 100%
 }
 
-.w3-col.s1 {
+.rx-col.s1 {
     width: 8.33333%
 }
 
-.w3-col.s2 {
+.rx-col.s2 {
     width: 16.66666%
 }
 
-.w3-col.s3 {
+.rx-col.s3 {
     width: 24.99999%
 }
 
-.w3-col.s4 {
+.rx-col.s4 {
     width: 33.33333%
 }
 
-.w3-col.s5 {
+.rx-col.s5 {
     width: 41.66666%
 }
 
-.w3-col.s6 {
+.rx-col.s6 {
     width: 49.99999%
 }
 
-.w3-col.s7 {
+.rx-col.s7 {
     width: 58.33333%
 }
 
-.w3-col.s8 {
+.rx-col.s8 {
     width: 66.66666%
 }
 
-.w3-col.s9 {
+.rx-col.s9 {
     width: 74.99999%
 }
 
-.w3-col.s10 {
+.rx-col.s10 {
     width: 83.33333%
 }
 
-.w3-col.s11 {
+.rx-col.s11 {
     width: 91.66666%
 }
 
-.w3-col.s12, .w3-half, .w3-third, .w3-twothird, .w3-threequarter, .w3-quarter {
+.rx-col.s12, .w3-half, .w3-third, .w3-twothird, .w3-threequarter, .w3-quarter {
     width: 99.99999%
 }
 
 @media only screen and (min-width: 601px) {
-    .w3-col.m1 {
+    .rx-col.m1 {
         width: 8.33333%
     }
 
-    .w3-col.m2 {
+    .rx-col.m2 {
         width: 16.66666%
     }
 
-    .w3-col.m3, .w3-quarter {
+    .rx-col.m3, .w3-quarter {
         width: 24.99999%
     }
 
-    .w3-col.m3, .w3-third {
+    .rx-col.m3, .w3-third {
         width: 33.33333%
     }
 
-    .w3-col.m5 {
+    .rx-col.m5 {
         width: 41.66666%
     }
 
-    .w3-col.m6, .w3-half {
+    .rx-col.m6, .w3-half {
         width: 49.99999%
     }
 
-    .w3-col.m7 {
+    .rx-col.m7 {
         width: 58.33333%
     }
 
-    .w3-col.m8, .w3-twothird {
+    .rx-col.m8, .w3-twothird {
         width: 66.66666%
     }
 
-    .w3-col.m9, .w3-threequarter {
+    .rx-col.m9, .w3-threequarter {
         width: 74.99999%
     }
 
-    .w3-col.m10 {
+    .rx-col.m10 {
         width: 83.33333%
     }
 
-    .w3-col.m11 {
+    .rx-col.m11 {
         width: 91.66666%
     }
 
-    .w3-col.m12 {
+    .rx-col.m12 {
         width: 99.99999%
     }
 }
 
 @media only screen and (min-width: 993px) {
-    .w3-col.l1 {
+    .rx-col.l1 {
         width: 8.33333%
     }
 
-    .w3-col.l2 {
+    .rx-col.l2 {
         width: 16.66666%
     }
 
-    .w3-col.l3, .w3-quarter {
+    .rx-col.l3, .w3-quarter {
         width: 24.99999%
     }
 
-    .w3-col.l4, .w3-third {
+    .rx-col.l4, .w3-third {
         width: 33.33333%
     }
 
-    .w3-col.l5 {
+    .rx-col.l5 {
         width: 41.66666%
     }
 
-    .w3-col.l6, .w3-half {
+    .rx-col.l6, .w3-half {
         width: 49.99999%
     }
 
-    .w3-col.l7 {
+    .rx-col.l7 {
         width: 58.33333%
     }
 
-    .w3-col.l8, .w3-twothird {
+    .rx-col.l8, .w3-twothird {
         width: 66.66666%
     }
 
-    .w3-col.l9, .w3-threequarter {
+    .rx-col.l9, .w3-threequarter {
         width: 74.99999%
     }
 
-    .w3-col.l10 {
+    .rx-col.l10 {
         width: 83.33333%
     }
 
-    .w3-col.l11 {
+    .rx-col.l11 {
         width: 91.66666%
     }
 
-    .w3-col.l12 {
+    .rx-col.l12 {
         width: 99.99999%
     }
 }
@@ -1404,7 +1404,7 @@ input[type=checkbox].w3-check:disabled + .w3-validate, input[type=radio].w3-radi
     border-right: 6px solid #ccc !important
 }
 
-.w3-row-padding, .w3-row-padding > .w3-half, .w3-row-padding > .w3-third, .w3-row-padding > .w3-twothird, .w3-row-padding > .w3-threequarter, .w3-row-padding > .w3-quarter, .w3-row-padding > .w3-col {
+.w3-row-padding, .w3-row-padding > .w3-half, .w3-row-padding > .w3-third, .w3-row-padding > .w3-twothird, .w3-row-padding > .w3-threequarter, .w3-row-padding > .w3-quarter, .w3-row-padding > .rx-col {
     padding: 0 8px
 }
 
@@ -1447,7 +1447,7 @@ input[type=checkbox].w3-check:disabled + .w3-validate, input[type=radio].w3-radi
     padding: 0.01em 12px
 }
 
-.w3-row, .w3-container-16 {
+.rx-row, .w3-container-16 {
     padding: 0.01em 16px
 }
 

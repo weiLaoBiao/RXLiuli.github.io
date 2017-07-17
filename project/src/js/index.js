@@ -2,6 +2,15 @@
  * Created by rxliuli on 17-7-15.
  */
 
+//region 回到顶部/底部
+
+$(document).ready(function () {
+    //页面每次重新加载都回到最底端(为了消除浏览器有时候无法回到顶端的问题还是暂且加上吧)
+    // $(document).scrollTop(10000);
+});
+
+//endregion
+
 //region 导航栏菜单
 
 $(document).ready(function () {
@@ -30,3 +39,30 @@ $(document).ready(function () {
 });
 
 //endregion
+
+//region 侧边栏
+
+$(document).ready(function () {
+    var $sideMenu = $("#side-menu");
+    //导航栏菜单元素单击事件
+    $(".top-nav-menu a:first").click(function () {
+        $sideMenu.stop();
+        if (parseInt($sideMenu.css("width")) > 0) {
+            $sideMenu.animate({width: "0", opacity: "0"}, 400, "swing");
+        }
+        else {
+            $sideMenu.animate({width: "250px", opacity: "1"}, 400);
+        }
+        // $("#side-menu").toggle();
+    });
+    //侧边栏菜单关闭按钮单击事件
+    $sideMenu.find(".icon-close").click(function () {
+        $sideMenu.stop();
+        $sideMenu.animate({width: "0"}, 400);
+
+        // $("#side-menu").css("width", "0");
+    });
+});
+
+//endregion
+
