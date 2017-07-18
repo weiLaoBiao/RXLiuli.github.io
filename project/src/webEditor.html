@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>editorHtml</title>
+    <!--引入基本的 css 和 jquery 类库-->
+    <link rel="stylesheet" href="css/common.css"/>
+    <script src="js/jquery-3.2.1.js"></script>
+    <!--引入自定义的 css 和 js 代码-->
+    <link rel="stylesheet" href="css/webEditor.css"/>
+    <script src="js/webEditor.js"></script>
+</head>
+<body>
+<main class="rx-row">
+    <!--分为两个板块-->
+    <section class="web-editor">
+        <header>
+            <h4>编辑这段代码：</h4>
+            <a href="javascript:void(0)" class="rx-btn btn-run">运行&gt;&gt;</a>
+        </header>
+        <article>
+            <!--region 此处为显示的代码，不用在乎-->
+            <textarea title="Web Editor" class="rx-code web-codes">
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("button").toggle(function () {
+                    $("body").css("background-color", "green");
+                },
+                function () {
+                    $("body").css("background-color", "red");
+                },
+                function () {
+                    $("body").css("background-color", "yellow");
+                }
+            );
+        });
+    </script>
+</head>
+<body>
+<button>Toggle Stream</button>
+</body>
+</html>
+            </textarea>
+            <!--endregion-->
+        </article>
+    </section>
+    <section class="web-content">
+        <header>
+            <h4>结果：</h4>
+            <div class="rx-row">
+                <label class="web-horizontal rx-row">
+                    <input type="radio" name="layout" title="水平布局" checked/>
+                    <div class="rx-row">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </label>
+                <label class="web-vertical rx-row">
+                    <input type="radio" name="layout" title="垂直布局"/>
+                    <div class="rx-col">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </label>
+            </div>
+        </header>
+        <!--左侧代码的运行结果-->
+        <article class="web-result"></article>
+    </section>
+</main>
+</body>
+</html>

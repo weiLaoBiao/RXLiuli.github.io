@@ -1,0 +1,116 @@
+/**/
+
+/*region main 主体部分*/
+
+/*行布局*/
+.rx-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*列布局*/
+.rx-col {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/*region 整体布局及公共部分*/
+main {
+    background-color: #f1f1f1;
+    margin: auto;
+}
+
+main > section {
+    flex: 1;
+    margin: 5px;
+}
+
+main > section > article {
+    background-color: white;
+    box-shadow: 0 5px 5px 0 grey;
+    overflow: auto;
+}
+
+/*设置头部相关的布局和属性*/
+main > section > header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
+}
+
+/*设置标题字体*/
+main section header h4 {
+    font-size: 18px;
+    font-weight: normal;
+}
+
+/*endregion*/
+
+/*region 设置左侧的代码编辑器*/
+
+/*设置按钮*/
+.rx-btn {
+    display: inline-block;
+    padding: 5px 10px;
+    color: white;
+    font-size: 16px;
+    background-color: #555555;
+    transition: all 0.5s;
+    margin-right: 10px;
+}
+
+.rx-btn:hover {
+    box-shadow: 0 5px 10px 0 grey;
+}
+
+/*设置 web-editor 编辑器*/
+.web-editor article textarea {
+    /*设置不可拖动*/
+    resize: none;
+    /*强制设置盒子模型的大小*/
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+    font-size: 16px;
+}
+
+/*endregion*/
+
+/*region 设置右侧的显示结果*/
+
+/*设置盒子*/
+.web-horizontal div {
+    justify-content: center;
+    padding: 0 5px;
+}
+
+/*设置水平排列的图标*/
+.web-horizontal span {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 10px;
+    height: 20px;
+    margin: 1px;
+    border: solid 1px grey;
+}
+
+/*设置垂直排列的图标*/
+.web-vertical span {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 20px;
+    height: 10px;
+    margin: 1px;
+    border: solid 1px grey;
+}
+
+/*endregion*/
+
+/*endregion*/
