@@ -1,0 +1,215 @@
+/**/
+
+/*region 顶部的 logo*/
+
+/*设置左边的 logo */
+.logo, .logo span {
+    font-size: 35px;
+    font-weight: bolder;
+}
+
+/*设置右边的说明文字*/
+.about {
+    font-size: 20px;
+    letter-spacing: 0.3em;
+}
+
+/*endregion*/
+
+/*region 导航栏菜单*/
+
+/*设置导航栏菜单项*/
+.nav-menu a {
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    transition: all 0.3s;
+}
+
+.nav-menu a:hover {
+    background-color: black;
+}
+
+/*endregion*/
+
+/*region 导航栏的详细菜单*/
+
+/*关闭按钮*/
+.btn-close {
+    position: absolute;
+    right: 0;
+    font-size: 30px;
+    text-align: center;
+    line-height: 30px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btn-close:hover {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/*设置这个导航栏下拉导航*/
+.drop-nav {
+    align-items: flex-start;
+    box-shadow: 0 5px 5px 0 grey;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    display: none;
+}
+
+/*设置列布局的侧轴排列方式*/
+.drop-nav .rx-col {
+    align-items: flex-start;
+    margin: 20px 0;
+}
+
+/*设置标题*/
+.drop-nav h1 {
+    padding: 10px 0;
+    font-weight: normal;
+    font-size: 22px;
+}
+
+/*设置每个子选项的属性*/
+.drop-nav a {
+    font-size: 16px;
+    color: #787878;
+    transition: all 0.5s;
+}
+
+#nav_tutorials a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+/*endregion*/
+
+/*region 侧边栏菜单*/
+
+/*设置侧边栏大体上的属性*/
+.left-menu {
+    width: 12%;
+    overflow: auto;
+    padding: 10px 0;
+}
+
+/*设置侧边栏文字*/
+.left-menu a {
+    color: black;
+    width: 100%;
+    text-indent: 15px;
+    font-size: 15px;
+    line-height: 30px;
+}
+
+.left-menu a:first-of-type {
+    background-color: #4caf50;
+    color: white;
+}
+
+.left-menu a:first-of-type ~ a:hover {
+    background-color: lightgrey;
+}
+
+.left-menu h1 {
+    font-size: 21px;
+    font-weight: normal;
+    text-indent: 15px;
+    margin-top: 10px;
+}
+
+/*endregion*/
+
+/*region 主体内容*/
+
+/*设置文字*/
+#main > header h1 {
+    font-size: 36px;
+    font-weight: normal;
+}
+
+#main > header a {
+    color: #4caf50;
+    font-size: 20px;
+}
+
+#main > header a:hover {
+    text-decoration-line: underline;
+}
+
+/*设置 宣传语*/
+#w3-main-01 {
+    background-color: #f1f1f1;
+    padding: 40px;
+}
+
+#w3-main-01 h1 {
+    font-weight: normal;
+    font-size: 36px;
+    text-align: center;
+}
+
+/*演示导航*/
+#w3-main-02 a {
+    flex: 1;
+    font-size: 24px;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    transition: 0.5s;
+}
+
+#w3-main-02 a:hover {
+    background-color: black;
+}
+
+/*设置 w3.css 的简介*/
+#w3-css-info {
+    padding-left: 30px;
+    border-left: solid 7px #4caf50;
+}
+
+/*设置次级标题 h2 的字体*/
+#main h2 {
+    font-weight: normal;
+    font-size: 30px;
+}
+
+/*设置*/
+.w3-hr {
+    margin: 20px 0;
+    color: #eeeeee;
+}
+
+/*设置图像*/
+
+/*endregion*/
+
+/*region 右边的颜色导航*/
+/*设置内容水平居中*/
+#right.rx-col {
+    width: 20%;
+    align-items: center;
+}
+
+/*设置标题*/
+#right h3 {
+    font-size: 18px;
+    font-weight: normal;
+    margin: 10px 0;
+}
+
+#right a {
+    color: black;
+}
+
+#right a:hover {
+    color: #4caf50;
+    text-decoration: underline;
+}
+
+/*endregion*/

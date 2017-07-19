@@ -1,0 +1,568 @@
+/*region 通用*/
+
+* {
+    /*为了浏览器的兼容，还是删除所有默认的内外边距吧*/
+    margin: 0;
+    padding: 0;
+    /*一般而言网页中的默认字体是 14px*/
+    font-size: 14px;
+    /*其实在很多时候强制换行(包括单词)也是可行的一种解决方案*/
+    /*word-break: break-all;*/
+    /*设置盒子宽高为 box-sizing*/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*一般而言 html,body（即网页整体）需要居中显示*/
+html, body {
+    margin: auto;
+}
+
+/*使用无序列表一般不需要前面的符号*/
+li {
+    list-style-type: none;
+}
+
+/*a 标签默认的下划线是不需要的*/
+a {
+    text-decoration: none;
+}
+
+/*endregion*/
+
+/*region 响应式布局*/
+
+/*行的流布局*/
+.rx-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*列的流布局*/
+.rx-col {
+    display: flex;
+    flex-direction: column;
+}
+
+/*左边界*/
+.rx-row-left {
+    margin-left: auto;
+}
+
+/*右边界*/
+.rx-row-right {
+    margin-left: auto;
+}
+
+/*region 占据窗口宽度*/
+
+/* 1/2 */
+.rx-half {
+    width: 49.9999%;
+}
+
+/* 1/3 */
+.rx-third {
+    width: 33.3333%;
+}
+
+/* 2/3 */
+.rx-two-third {
+    width: 66.6666%;
+}
+
+/* 1/4 */
+.rx-quarter {
+    width: 24.9999%;
+}
+
+/* 3/4 */
+.rx-three-quarter {
+    width: 24.9999%;
+}
+
+/* 全部剩余的宽度 */
+.rx-rest {
+    /*overflow: hidden;*/
+    flex: 1;
+}
+
+/*12/12*/
+.rx-col-1 {
+    width: 8.3333%;
+}
+
+.rx-col-2 {
+    width: 16.6666%;
+}
+
+.rx-col-3 {
+    width: 24.9999%;
+}
+
+.rx-col-4 {
+    width: 33.3333%;
+}
+
+.rx-col-5 {
+    width: 41.6666%;
+}
+
+.rx-col-6 {
+    width: 49.9999%;
+}
+
+.rx-col-7 {
+    width: 58.3333%;
+}
+
+.rx-col-8 {
+    width: 66.6666%;
+}
+
+.rx-col-9 {
+    width: 74.9999%;
+}
+
+.rx-col-10 {
+    width: 83.3333%;
+}
+
+.rx-col-11 {
+    width: 91.6666%;
+}
+
+.rx-col-12 {
+    width: 99.9999%;
+}
+
+/*endregion*/
+
+/*endregion*/
+
+/*region 内外边距*/
+
+/*四周方向*/
+.rx-padding {
+    padding: 16px;
+}
+
+/*水平方向*/
+.rx-padding-horizontal {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+/*垂直方向*/
+.rx-padding-vertical {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+/*endregion*/
+
+/*region 导航栏*/
+
+.rx-nav-menu {
+
+}
+
+/*endregion*/
+
+/*region 颜色*/
+
+/*region 背景颜色*/
+
+/*红色*/
+.rx-red {
+    background-color: #f44336;
+}
+
+/*粉红*/
+.rx-pink {
+    color: #e91e63;
+}
+
+/*紫色*/
+.rx-purple {
+    color: #9c27b0;
+}
+
+/*深紫色*/
+.rx-deep-purple {
+    color: #673ab7;
+}
+
+/*靛蓝色*/
+.rx-indigo {
+    color: #3f51b5;
+}
+
+/*蓝色*/
+.rx-blue {
+    color: #2196f3;
+}
+
+/*浅蓝色*/
+.rx-light-blue {
+    color: #87ceeb;
+}
+
+/*青色*/
+.rx-cyan {
+    color: #00bcd4;
+}
+
+/*aqua*/
+.rx-aqua {
+    color: #00ffff;
+}
+
+/*水鸭*/
+.rx-teal {
+    color: #009688;
+}
+
+/*绿色*/
+.rx-green {
+    background-color: #4caf50;
+}
+
+/*浅绿色*/
+.rx-light-green {
+    background-color: #8bc34a;
+}
+
+/*石灰*/
+.rx-lime {
+    background-color: #cddc39;
+}
+
+/*砂*/
+.rx-sand {
+    background-color: #fdf5e6;
+}
+
+/*卡其*/
+.rx-khaki {
+    background-color: #f0e68c;
+}
+
+/*黄色*/
+.rx-yellow {
+    background-color: #ffeb3b;
+}
+
+/*琥珀色*/
+.rx-amber {
+    background-color: #ffc107;
+}
+
+/*橙色*/
+.rx-orange {
+    background-color: #ff9800;
+}
+
+/*深橙色*/
+.rx-deep-orange {
+    background-color: #ff5722;
+}
+
+/*蓝灰色*/
+.rx-blue-grey {
+    background-color: #607d8b;
+}
+
+/*褐色*/
+.rx-brown {
+    background-color: #795548;
+}
+
+/*浅灰色*/
+.rx-light-grey {
+    background-color: #f1f1f1;
+}
+
+/*灰*/
+.rx-grey {
+    background-color: #9e9e9e;
+}
+
+/*深灰色*/
+.rx-dark-grey {
+    background-color: #616161;
+}
+
+/*黑*/
+.rx-black {
+    background-color: #000000;
+}
+
+/*白色*/
+.rx-white {
+    background-color: #ffffff;
+}
+
+/*浅红色*/
+.rx-pale-red {
+    background-color: #ffe7e7;
+}
+
+/*浅黄色*/
+.rx-pale-yellow {
+    background-color: #ffffd7;
+}
+
+/*淡绿色*/
+.rx-pale-green {
+    background-color: #e7ffe7;
+}
+
+/*淡蓝色*/
+.rx-pale-blue {
+    background-color: #e7ffff;
+}
+
+/*深灰色*/
+.rx-dark-grey {
+    background-color: #616161;
+}
+
+/*endregion*/
+
+/*region 文字颜色*/
+
+/*红色*/
+.rx-text-red {
+    color: #f44336;
+}
+
+/*粉红*/
+.rx-text-pink {
+    color: #e91e63;
+}
+
+/*紫色*/
+.rx-text-purple {
+    color: #9c27b0;
+}
+
+/*深紫色*/
+.rx-text-deep-purple {
+    color: #673ab7;
+}
+
+/*靛蓝色*/
+.rx-text-indigo {
+    color: #3f51b5;
+}
+
+/*蓝色*/
+.rx-text-blue {
+    color: #2196f3;
+}
+
+/*浅蓝色*/
+.rx-text-light-blue {
+    color: #87ceeb;
+}
+
+/*青色*/
+.rx-text-cyan {
+    color: #00bcd4;
+}
+
+/*aqua*/
+.rx-text-aqua {
+    color: #00ffff;
+}
+
+/*水鸭*/
+.rx-text-teal {
+    color: #009688;
+}
+
+/*绿色*/
+.rx-text-green {
+    color: #4caf50;
+}
+
+/*浅绿色*/
+.rx-text-light-green {
+    color: #8bc34a;
+}
+
+/*石灰*/
+.rx-text-lime {
+    color: #cddc39;
+}
+
+/*砂*/
+.rx-text-sand {
+    color: #fdf5e6;
+}
+
+/*卡其*/
+.rx-text-khaki {
+    color: #f0e68c;
+}
+
+/*黄色*/
+.rx-text-yellow {
+    color: #ffeb3b;
+}
+
+/*琥珀色*/
+.rx-text-amber {
+    color: #ffc107;
+}
+
+/*橙色*/
+.rx-text-orange {
+    color: #ff9800;
+}
+
+/*深橙色*/
+.rx-text-deep-orange {
+    color: #ff5722;
+}
+
+/*蓝灰色*/
+.rx-text-blue-grey {
+    color: #607d8b;
+}
+
+/*褐色*/
+.rx-text-brown {
+    color: #795548;
+}
+
+/*浅灰色*/
+.rx-text-light-grey {
+    color: #f1f1f1;
+}
+
+/*灰*/
+.rx-text-grey {
+    color: #9e9e9e;
+}
+
+/*深灰色*/
+.rx-text-dark-grey {
+    color: #616161;
+}
+
+/*黑*/
+.rx-text-black {
+    color: #000000;
+}
+
+/*白色*/
+.rx-text-white {
+    color: #ffffff;
+}
+
+/*浅红色*/
+.rx-text-pale-red {
+    color: #ffe7e7;
+}
+
+/*浅黄色*/
+.rx-text-pale-yellow {
+    color: #ffffd7;
+}
+
+/*淡绿色*/
+.rx-text-pale-green {
+    color: #e7ffe7;
+}
+
+/*淡蓝色*/
+.rx-text-pale-blue {
+    color: #e7ffff;
+}
+
+/*深灰色*/
+.rx-text-dark-grey {
+    color: #616161;
+}
+
+/*endregion*/
+
+/*endregion*/
+
+/*region 文字*/
+
+/*强制换行(断词)*/
+.rx-word-break {
+    word-break: break-all;
+}
+
+/*字体大小*/
+.rx-font-16 {
+    font-size: 16px;
+}
+
+.rx-font-20 {
+    font-size: 20px;
+}
+
+.rx-font-24 {
+    font-size: 24px;
+}
+
+.rx-font-30 {
+    font-size: 30px;
+}
+
+/*endregion*/
+
+/*region 形状*/
+
+/*region 三角形*/
+
+/*向上向下三角形的公共部分*/
+.rx-delta-top, .rx-delta-bottom {
+    width: 0;
+    height: 0;
+    border-left: solid 7px transparent;
+    border-right: solid 7px transparent;
+    margin: auto 5px;
+}
+
+/*三角形(向上)*/
+.rx-delta-top {
+    border-bottom: solid 7px white;
+}
+
+/*三角形(向下)*/
+.rx-delta-bottom {
+    border-top: solid 7px white;
+}
+
+/*向上向下三角形的公共部分*/
+.rx-delta-left, .rx-delta-right {
+    width: 0;
+    height: 0;
+    border-top: solid 7px transparent;
+    border-bottom: solid 7px transparent;
+    margin: auto 5px;
+}
+
+/*三角形(向上)*/
+.rx-delta-left {
+    border-right: solid 7px white;
+}
+
+/*三角形(向下)*/
+.rx-delta-right {
+    border-left: solid 7px white;
+}
+
+/*endregion*/
+
+/*endregion*/
+

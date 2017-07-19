@@ -43,7 +43,7 @@ $(document).ready(function () {
 //region 侧边栏
 
 $(document).ready(function () {
-    var $sideMenu = $("#side-menu");
+    var $sideMenu = $("#left-menu");
     //导航栏菜单元素单击事件
     $(".top-nav-menu a:first").click(function () {
         $sideMenu.stop();

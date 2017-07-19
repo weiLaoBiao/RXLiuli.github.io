@@ -25,9 +25,4 @@ a {
     text-decoration: none;
 }
 
-/*一般而言链接在鼠标悬浮时会变成红色(已废弃)*/
-a:hover {
-    /*color: orangered;*/
-}
-
 /*endregion*/

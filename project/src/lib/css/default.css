@@ -179,7 +179,7 @@ main {
 /*region 侧边栏*/
 
 /*整体布局*/
-#side-menu {
+#left-menu {
     width: 0;
     opacity: 0;
     overflow-x: hidden;
@@ -189,30 +189,30 @@ main {
 }
 
 /*关闭按钮*/
-#side-menu .icon-close {
+#left-menu .icon-close {
     margin-right: 0;
 }
 
 /*设置菜单的整体布局*/
-#side-menu section {
+#left-menu section {
     flex-direction: column;
     justify-content: flex-start;
     width: 100%;
 }
 
 /*设置文字强制不换行*/
-#side-menu section * {
+#left-menu section * {
     white-space: nowrap;
 }
 
 /*设置侧边菜单栏的标题和内容*/
-#side-menu h1 {
+#left-menu h1 {
     padding-left: 10px;
     margin: 10px 0;
     font-size: 22px;
 }
 
-#side-menu a {
+#left-menu a {
     padding-left: 10px;
     display: block;
     font-size: 16px;
@@ -221,7 +221,7 @@ main {
     transition: all 0.5s;
 }
 
-#side-menu a:hover {
+#left-menu a:hover {
     background-color: #cccccc;
 }
 
@@ -268,7 +268,7 @@ main {
 }
 
 /*设置两边按钮的独有属性*/
-.about-content .rx-btn, .about-codes .rx-btn {
+.about-content .rx-btn, .rx-codes .rx-btn {
     color: white;
     font-size: 16px;
 }
@@ -280,7 +280,7 @@ main {
 }
 
 /*右边按钮独有属性*/
-.about-codes .rx-btn {
+.rx-codes .rx-btn {
     background-color: #4caf50;
 }
 
@@ -307,7 +307,7 @@ main {
 
 /*region 设置教程的示例代码*/
 
-.about-codes > div {
+.rx-codes > div {
     /*height: 350px;*/
     padding: 20px;
     background-color: #f1f1f1;
@@ -316,20 +316,27 @@ main {
 }
 
 /*设置示例代码的标题*/
-.about-codes header * {
+.rx-codes header * {
     font-size: 20px;
     font-weight: normal;
 }
 
 /*代码部分*/
-.about-codes pre {
+.rx-codes pre {
     background-color: white;
     border-left: solid 5px #4caf50;
     padding: 1em;
     margin: 15px auto;
+    font-family: myDejaVuSansMono, serif;
 }
 
-.about-codes pre, .about-codes pre * {
+/*定义编程专用字体*/
+@font-face {
+    font-family: myDejaVuSansMono;
+    src: url("../fonts/DejaVuSansMono.ttf");
+}
+
+.rx-codes pre, .rx-codes pre * {
     font-size: 16px;
 }
 

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>w3.css</title>
+    <!--引入基本的 css 和 jquery 类库-->
+    <link rel="stylesheet" href="../lib/css/common.css"/>
+    <script src="../lib/js/jquery-3.2.1.js"></script>
+    <!--引入自定义的 css 和 jQuery 类库-->
+    <link rel="stylesheet" href="css/rx.css"/>
+
+    <link rel="stylesheet" href="css/default.css"/>
+    <script src="js/default.js"></script>
+</head>
+<body>
+<header>
+    <!--网站顶部的 logo -->
+    <div class="rx-row rx-padding">
+        <a class="logo rx-text-dark-grey" href="">
+            w3schools<span class="rx-text-green">.com</span>
+        </a>
+        <div class="about w3-right">世界最大的 WEB 开发者网站</div>
+    </div>
+    <!--导航栏-->
+    <nav class="nav-menu rx-row rx-padding-horizontal rx-dark-grey">
+        <a href="javascript:void(0)">☰</a>
+        <a href="">HTML</a>
+        <a href="">CSS</a>
+        <a href="">JAVASCRIPT</a>
+        <a href="">SQL</a>
+        <a href="">PHP</a>
+        <a href="">BOOTSTRAP</a>
+        <a href="">JQUERY</a>
+        <a href="">ANGULAR</a>
+        <a href="">XML</a>
+        <a class="rx-row-right rx-row" href="javascript:void(0)">
+            教程
+            <span class="rx-delta-bottom"></span>
+        </a>
+        <a class="rx-row" href="javascript:void(0)">
+            参考
+            <span class="rx-delta-bottom"></span>
+        </a>
+        <a class="rx-row" href="javascript:void(0)">
+            例子
+            <span class="rx-delta-bottom"></span>
+        </a>
+    </nav>
+    <!--下面的具体内容-->
+    <aside class="drop-nav rx-row rx-padding-horizontal rx-light-grey">
+        <span class="btn-close">&times;</span>
+        <section class="rx-col rx-col-2">
+            <h1>HTML和CSS</h1>
+            <a href="">学习 HTML</a>
+            <a href="">学习 CSS</a>
+            <a href="">学习 W3.CSS</a>
+            <a href="">学习颜色</a>
+            <a href="">学习Bootstrap</a>
+        </section>
+
+        <section class="rx-col rx-col-2">
+            <h1>JavaScript</h1>
+            <a href="">学习JavaScript</a>
+            <a href="">学习jQuery</a>
+            <a href="">学习jQueryMobile</a>
+            <a href="">学习AppML</a>
+            <a href="">了解AngularJS</a>
+            <a href="">了解AJAX</a>
+            <a href="">了解JSON</a>
+        </section>
+        <section class="rx-col rx-col-2">
+            <h1>HTML图形</h1>
+            <a href="">了解画布</a>
+            <a href="">了解SVG</a>
+            <a href="">了解图标</a>
+            <a href="">了解谷歌地图</a>
+            <a href="">了解 HTML 游戏</a>
+        </section>
+        <section class="rx-col rx-col-2">
+            <h1>服务器端</h1>
+            <a href="">了解SQL</a>
+            <a href="">学习PHP</a>
+            <a href="">学习ASP</a>
+            <a href="">学习ASP.NET</a>
+        </section>
+        <section class="rx-col rx-col-2">
+            <h1>网站建设</h1>
+            <a href="">网站建设</a>
+            <a href="">网站统计</a>
+            <a href="">Web认证</a>
+        </section>
+        <section class="rx-col rx-col-2">
+            <h1>XML教程</h1>
+            <a href="">了解XML</a>
+            <a href="">了解XSLT</a>
+        </section>
+    </aside>
+    <aside class="drop-nav rx-row rx-padding-horizontal rx-light-grey">
+        <span class="btn-close">&times;</span>
+        <section class="rx-col rx-col-2">
+            <h1>HTML</h1>
+            <a href="">HTML标签参考</a>
+            <a href="">HTML事件参考</a>
+            <a href="">HTML颜色参考</a>
+        </section>
+        <section class="rx-col rx-col-2">
+            <h1>CSS</h1>
+            <a href="">CSS参考</a>
+            <a href="">CSS选择器参考</a>
+            <a href="">W3.CSS参考</a>
+            <a href="">Bootstrap参考</a>
+        </section>
+        <section class="rx-col rx-col-2">
+            <h1>JavaScript</h1>
+            <a href="">javascript参考</a>
+            <a href="">HTML DOM参考</a>
+            <a href="">jQuery的参考</a>
+            <a href="">jQuery Mobile的参考</a>
+            <a href="">AngularJS参考</a>
+            <a href="">谷歌地图参考</a>
+        </section>
+        <section class="rx-col rx-col-2">
+            <h1>服务器端</h1>
+            <a href="">PHP参考</a>
+            <a href="">SQL参考</a>
+            <a href="">ASP参考</a>
+            <a href="">ASP.NET参考</a>
+            <a href="">ReferenceRazor参考</a>
+        </section>
+        <section class="rx-col rx-col-2">
+            <h1>XML</h1>
+            <a href="">XML DOM参考</a>
+            <a href="">XSLT参考</a>
+            <a href="">XML Schema参考手册</a>
+            <a href="">SVG参考</a>
+        </section>
+        <section class="rx-col rx-col-2">
+            <h1>集</h1>
+            <a href="">HTML字符集</a>
+            <a href="">HTML ASCII</a>
+            <a href="">HTML ANSI</a>
+            <a href="">HTML的Windows 1252</a>
+            <a href="">HTML ISO-8859-1</a>
+            <a href="">HTML符号</a>
+            <a href="">HTML UTF-8</a>
+        </section>
+    </aside>
+    <aside class="drop-nav rx-row rx-padding-horizontal rx-light-grey">
+        <span class="btn-close">&times;</span>
+        <section class="rx-col rx-col-2">
+            <h1>HTML和CSS</h1>
+            <a href="">HTML例子</a>
+            <a href="">CSS例子</a>
+            <a href="">W3.CSS例子</a>
+        </section>
+        <section class="rx-col rx-col-2">
+            <h1>JavaScript</h1>
+            <a href="">JavaScript的例子</a>
+            <a href="">HTML DOM例子</a>
+            <a href="">jQuery的例子</a>
+            <a href="">jQuery Mobile的例子</a>
+            <a href="">AngularJS例子</a>
+            <a href="">AJAX例子</a>
+        </section>
+        <section class="rx-col rx-col-2">
+            <h1>服务器端</h1>
+            <a href="">PHP例子</a>
+            <a href="">ASP实例</a>
+            <a href="">ReferenceRazor例子</a>
+            <a href="">.NET的例子</a>
+        </section>
+        <section class="rx-col rx-col-2">
+            <h1>XML</h1>
+            <a href="">XML实例</a>
+            <a href="">XSLT例子</a>
+            <a href="">XPath的例子</a>
+            <a href="">XML Schema的例子</a>
+            <a href="">SVG例子</a>
+        </section>
+    </aside>
+</header>
+<main class="rx-row">
+    <article class="left-menu rx-col rx-light-grey">
+        <a href="">W3.CSS HOME</a>
+        <a href="">W3.CSS演示</a>
+        <a href="">W3.CSS颜色</a>
+        <a href="">W3.CSS实用工具</a>
+        <a href="">W3.CSS集装箱</a>
+        <a href="">W3.CSS按钮</a>
+        <a href="">W3.CSS卡</a>
+        <a href="">W3.CSS警报</a>
+        <a href="">W3.CSS表</a>
+        <a href="">W3.CSS列出</a>
+        <a href="">W3.CSS图片</a>
+        <a href="">W3.CSS输入</a>
+        <a href="">W3.CSS徽章</a>
+        <a href="">W3.CSS迹象</a>
+        <a href="">W3.CSS响应</a>
+        <a href="">W3.CSS动画</a>
+        <a href="">W3.CSS下拉框</a>
+        <a href="">W3.CSS手风琴</a>
+        <a href="">W3.CSS导航</a>
+        <a href="">W3.CSS侧边栏</a>
+        <a href="">W3.CSS标签</a>
+        <a href="">W3.CSS分页</a>
+        <a href="">W3.CSS进度条</a>
+        <a href="">W3.CSS印刷术</a>
+        <a href="">W3.CSS字体</a>
+        <a href="">W3.CSS图标</a>
+        <a href="">W3.CSS幻灯片</a>
+        <a href="">W3.CSS影响</a>
+        <a href="">W3.CSS莫代尔</a>
+        <a href="">W3.CSS工具提示</a>
+        <a href="">W3.CSS电网</a>
+        <a href="">W3.CSS主题</a>
+        <a href="">W3.CSS调色板</a>
+        <a href="">W3.CSS库</a>
+        <a href="">W3.CSS趋势</a>
+        <h1>例子</h1>
+        <a href="">W3.CSS例子</a>
+        <a href="">W3.CSS模板</a>
+        <h1>参考</h1>
+        <a href="">W3.CSS参考</a>
+        <a href="">W3.CSS下载</a>
+        <h1>W3.CSS案例</h1>
+        <a href="">案例首页</a>
+        <a href="">案例头</a>
+        <a href="">案例响应</a>
+        <a href="">病例导航</a>
+        <a href="">仪表盘</a>
+    </article>
+    <article class="rx-rest">
+        <div class="rx-row rx-white" style="align-items: flex-start;">
+            <div id="main" class="rx-padding rx-rest">
+                <!--头部-->
+                <header>
+                    <h1>W3.CSS 教程</h1>
+                    <div class="rx-row">
+                        <a href="">«上一页</a>
+                        <a href="">下一章»</a>
+                    </div>
+                </header>
+                <!--宣传语-->
+                <div id="w3-main-01">
+                    <h1>W3.CSS</h1>
+                    <h1>更快更好地</h1>
+                    <h1>响应网站</h1>
+                </div>
+                <!--演示导航-->
+                <nav id="w3-main-02" class="rx-row rx-dark-grey">
+                    <a href="">演示</a>
+                    <a href="">演示</a>
+                    <a href="">演示</a>
+                    <a href="">演示</a>
+                    <a href="">演示</a>
+                    <a href="">演示</a>
+                </nav>
+                <br/>
+                <hr class="w3-hr"/>
+                <br/>
+                <h2>什么是W3.CSS？</h2>
+                <p class="rx-padding-vertical">W3.CSS是内置响应现代CSS框架：</p>
+                <p id="w3-css-info">
+                    而小于其它CSS框架更快。<br/>
+                    更容易学习，而且更容易比其他的CSS框架使用。<br/>
+                    使用标准的CSS（不使用jQuery的或JavaScript库）。<br/>
+                    加快移动HTML应用程序。<br/>
+                    提供所有设备的CSS平等。PC，笔记本电脑，平板电脑和移动：<br/>
+                </p>
+                <div style="margin: 40px 0;">
+                    <img src="images/img_responsive.png" width="100%"/>
+                </div>
+                <hr class="w3-hr"/>
+                <h2>W3.CSS是免费</h2>
+                <p>W3.CSS是免费使用的。没有许可证是必要的。</p>
+                <hr class="w3-hr"/>
+                <h2>使用方便</h2>
+                <div class="rx-padding rx-sand" style="border-left: solid 5px #9e9e9e">
+                    <em>让它尽可能的简单，而不是更简单。</em>
+                    <p>艾尔伯特 爱因斯坦</p>
+                </div>
+                <aside>
+                    <h2>例</h2>
+                    <a href=""></a>
+                </aside>
+            </div>
+            <div id="right" class="rx-col">
+                <h3>选色器</h3>
+                <a href=""><img src="images/colorpicker.png" width="80px"/></a>
+                <h3>学到更多: </h3>
+                <a href="">颜色转换器</a>
+                <a href="">谷歌地图</a>
+                <a href="">动画按钮</a>
+                <a href="">莫代尔箱</a>
+                <a href="">模态图像</a>
+                <a href="">工具提示</a>
+                <a href="">装载机</a>
+                <a href="">JS动画</a>
+                <a href="">进度条</a>
+                <a href="">下拉菜单</a>
+                <a href="">幻灯片</a>
+                <a href="">侧面导航</a>
+                <a href="">HTML包括</a>
+                <a href="">调色板</a>
+            </div>
+        </div>
+        <footer></footer>
+    </article>
+</main>
+</body>
+</html>

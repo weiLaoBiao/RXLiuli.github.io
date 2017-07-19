@@ -31,7 +31,7 @@ main > section {
 
 main > section > article {
     background-color: white;
-    box-shadow: 0 5px 5px 0 grey;
+    box-shadow: 0 0 5px 0 grey;
     overflow: auto;
 }
 
@@ -79,6 +79,13 @@ main section header h4 {
     height: 100%;
     padding: 1em;
     font-size: 16px;
+    font-family: myDejaVuSansMono, serif;
+}
+
+/*定义编程专用字体*/
+@font-face {
+    font-family: myDejaVuSansMono;
+    src: url("../../lib/fonts/DejaVuSansMono.ttf");
 }
 
 /*endregion*/

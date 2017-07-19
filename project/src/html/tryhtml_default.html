@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <title>editorHtml</title>
     <!--引入基本的 css 和 jquery 类库-->
-    <link rel="stylesheet" href="css/common.css"/>
-    <script src="js/jquery-3.2.1.js"></script>
+    <link rel="stylesheet" href="../lib/css/common.css"/>
+    <script src="../lib/js/jquery-3.2.1.js"></script>
     <!--引入自定义的 css 和 js 代码-->
-    <link rel="stylesheet" href="css/webEditor.css"/>
-    <script src="js/webEditor.js"></script>
+    <link rel="stylesheet" href="css/tryhtml_default.css"/>
+    <script src="js/tryhtml_default.js"></script>
 </head>
 <body>
 <main class="rx-row">
@@ -22,26 +22,13 @@
             <!--region 此处为显示的代码，不用在乎-->
             <textarea title="Web Editor" class="rx-code web-codes">
 <!DOCTYPE html>
-<html lang="zh-cn">
-<head>
-    <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $("button").toggle(function () {
-                    $("body").css("background-color", "green");
-                },
-                function () {
-                    $("body").css("background-color", "red");
-                },
-                function () {
-                    $("body").css("background-color", "yellow");
-                }
-            );
-        });
-    </script>
-</head>
+<html>
+<title>HTML Tutorial</title>
 <body>
-<button>Toggle Stream</button>
+
+<h1>This is a heading</h1>
+<p>This is a paragraph.</p>
+
 </body>
 </html>
             </textarea>
