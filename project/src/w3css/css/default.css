@@ -147,7 +147,7 @@
     padding: 40px;
 }
 
-#w3-main-01 h1 {
+#w3-main-01 > h1 {
     font-weight: normal;
     font-size: 36px;
     text-align: center;
@@ -185,7 +185,119 @@
     color: #eeeeee;
 }
 
-/*设置图像*/
+/*region 设置教程的示例代码*/
+
+/*设置按钮*/
+.rx-btn {
+    display: inline-block;
+    padding: 5px 10px;
+    transition: all 0.5s;
+}
+
+.rx-btn:hover {
+    box-shadow: 0 5px 10px 0 grey;
+}
+
+.examples-codes > div {
+    /*height: 350px;*/
+    padding: 20px;
+    margin: 30px 0;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 slategrey;
+}
+
+/*设置示例代码的标题*/
+.examples-codes header * {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+/*代码部分*/
+.examples-codes pre {
+    background-color: white;
+    border-left: solid 5px #4caf50;
+    padding: 1em;
+    margin: 15px auto;
+    font-family: myDejaVuSansMono, serif;
+}
+
+/*定义编程专用字体*/
+@font-face {
+    font-family: myDejaVuSansMono;
+    src: url("../../lib/fonts/DejaVuSansMono.ttf");
+}
+
+.examples-codes pre, .examples-codes pre * {
+    font-size: 16px;
+}
+
+/*设置代码部分标签关键字的颜色*/
+.blue {
+    color: blue;
+}
+
+.darkred {
+    color: darkred;
+}
+
+.red {
+    color: red;
+}
+
+/*设置最后一个*/
+.examples-codes:last-of-type * {
+    text-align: center;
+}
+
+.examples-codes:last-of-type .rx-btn {
+    width: 380px;
+    padding: 10px;
+    margin: 5px 10px;
+}
+
+/*endregion*/
+
+/*endregion*/
+
+/*region 底部导航版权*/
+
+/*设置独特的布局方式*/
+.bottom-nav {
+    align-items: flex-start;
+}
+
+.bottom-nav .rx-col {
+    align-items: center;
+}
+
+/*设置文字*/
+.bottom-nav h1 {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.bottom-nav a {
+    color: black;
+}
+
+.bottom-nav a:hover {
+    color: #4caf50;
+    text-decoration-line: underline;
+}
+
+/*设置版权文字*/
+.rx-rest > footer {
+    text-align: center;
+}
+
+.rx-rest > footer > p:first-of-type {
+    margin: 20px 0 5px;
+}
+
+.rx-rest > footer > p:last-of-type {
+    margin: 20px 0;
+}
 
 /*endregion*/
 
