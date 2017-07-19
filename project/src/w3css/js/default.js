@@ -6,7 +6,7 @@
 
 $(document).ready(function () {
     //页面每次重新加载都回到最底端(为了消除浏览器有时候无法回到顶端的问题还是暂且加上吧)
-    // $(document).scrollTop(10000);
+    $(document).scrollTop(0);
 });
 
 //endregion
